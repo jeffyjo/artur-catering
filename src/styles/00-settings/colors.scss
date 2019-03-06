@@ -1,0 +1,16 @@
+// Config vars
+// Kaldi logo brand color: #FD461E
+$kaldi-red: #D64000;
+$kaldi-red-invert: #fff;
+
+$primary: $kaldi-red;
+$primary-invert: $kaldi-red-invert;
+$body-color: #333;
+$black: #2b2523;
+
+//Menu overrides
+$menu-item-hover-color: $black !important;
+$menu-item-hover-background-color: $black;
+$menu-item-active-color: $kaldi-red-invert;
+$menu-item-active-background-color:	$kaldi-red-invert;
+$menu-list-border-left: 1px solid $kaldi-red-invert;

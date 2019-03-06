@@ -1,0 +1,29 @@
+footer.footer {
+    padding: 3rem 0rem;
+    background-color: transparent;
+}
+
+.menu-label {
+  font-size: 1em !important;
+  text-align: left;
+}
+
+.menu-list {
+  list-style: none !important;
+  text-align: left;
+}
+
+.social {
+    padding: 2em;
+  
+    & a {
+      padding: .5em .5em .3em .5em;
+      border-radius: 1em;
+      background-color: #f2f2f2;
+      margin: .5em;
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      display: inline;
+    }
+  }
