@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import './Navbar.scss'
+
 const Navbar = class extends React.Component {
   componentDidMount() {
     // Get all "navbar-burger" elements
@@ -28,7 +30,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-transparent o-navbar"
         role="navigation"
         aria-label="main-navigation"
       >
@@ -44,16 +46,19 @@ const Navbar = class extends React.Component {
               <span />
             </div>
           </div>
-          <div id="navMenu" className="navbar-menu">
+          <div id="navMenu" className="navbar-menu o-navbar__menu">
             <div className="navbar-start has-text-centered">
               <Link className="navbar-item" to="/about">
                 About
               </Link>
+              <Link className="navbar-item" to="/plans">
+                Plans
+              </Link>
+              <Link className="navbar-item" to="/dishes">
+                Dishes
+              </Link>
               <Link className="navbar-item" to="/contact">
                 Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
               </Link>
             </div>
           </div>

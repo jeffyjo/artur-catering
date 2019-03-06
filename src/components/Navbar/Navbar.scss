@@ -1,3 +1,14 @@
-.navbar .navbar-menu {
+@import '../../styles/all.scss';
+
+.o-navbar {
+    position: fixed;
+    width: 100%;
+    
+    @include lg {
+        position: static;
+    }
+}
+
+.o-navbar__menu {
     box-shadow:none !important;
 }
