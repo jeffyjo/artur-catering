@@ -2,8 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Navbar from '../Navbar'
-import Footer from '../Footer'
+import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 import '../../styles/all.scss'
 
