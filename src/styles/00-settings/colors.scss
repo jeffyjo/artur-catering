@@ -1,16 +1,23 @@
-// Config vars
-// Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000;
-$kaldi-red-invert: #fff;
 
-$primary: $kaldi-red;
-$primary-invert: $kaldi-red-invert;
-$body-color: #333;
-$black: #2b2523;
+/* Primary color */
+// Brand
 
-//Menu overrides
-$menu-item-hover-color: $black !important;
-$menu-item-hover-background-color: $black;
-$menu-item-active-color: $kaldi-red-invert;
-$menu-item-active-background-color:	$kaldi-red-invert;
-$menu-list-border-left: 1px solid $kaldi-red-invert;
+$brand-green:		rgba(118, 186, 184, 1);
+$brand-blue:		rgba(137, 227, 237, 1);
+$brand-dark-blue:	rgba(118, 144, 160, 1);
+
+/* Secondary color */
+// Grey
+$grey--100:     	#2f2f2f;
+$grey--200:     	#333;
+$grey--300:     	#555;
+$grey--400:     	#686868;
+$grey--600:     	#7c7c7c;
+$grey--700:     	#8c8c8c;
+$grey--900:			#f2f2f2;
+
+$color-dark:		#000;
+$color-light:		#fff;
+
+$navbar--bg:		$brand-green;
+$navbar--text:		$grey--900;

@@ -1,4 +1,5 @@
 @import "~bulma/sass/utilities/initial-variables";
+@import "~bulma";
 
 /* SETTINGS */
 @import './00-settings/colors';
@@ -12,4 +13,3 @@
 @import './02-generic/reset';
 
 /* ELEMENTS */
-@import "~bulma"
