@@ -1,0 +1,46 @@
+.m-list {
+
+}
+
+.m-list__label {
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+
+.m-list__icon {
+    position: absolute;
+    top: .3rem;
+    left: 3rem;
+    transform: rotate(0);
+    transition: transform .1s ease-in-out;
+}
+
+.m-list__content {
+    display: none;
+}
+
+.m-list__input {
+    display: none;
+
+    &:checked {
+        & ~ .m-list__label > .m-list__icon{
+            transform: rotate(90deg);
+        }
+        & ~ .m-list__content {
+            display: block;
+        }
+    }
+}
+
+.m-list__title {
+    font-size: 1.1rem;
+}
+
+.m-list__item {
+}
+
+.m-list__item-link {
+    display: block;
+    margin-left: 1rem;
+}
