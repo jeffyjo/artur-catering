@@ -1,4 +1,4 @@
-@import "~bulma/sass/utilities/initial-variables";
+// @import "~bulma/sass/utilities/initial-variables";
 @import "~bulma";
 
 /* SETTINGS */
@@ -13,3 +13,6 @@
 @import './02-generic/reset';
 
 /* ELEMENTS */
+
+/* UTILS */
+@import './99-util/sections';
