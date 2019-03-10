@@ -12,7 +12,8 @@ class DishesIndex extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cart: []
+      cart: [],
+      cartTotal: 0
     };
 
     this.UpdateCart = this.UpdateCart.bind(this);
@@ -20,34 +21,23 @@ class DishesIndex extends Component {
 
   UpdateCart(item) {
     const prevState = this.state.cart;
-    console.log(item);
-    let empty = prevState.filter(dish => dish.name !== item.name);
-    console.log("Empty: " + empty);
-    // console.log("1: " + )
-    if (empty === undefined || empty.length == 0) {
-      this.setState({ cart: [...prevState, ...item] });
-    } else {
-      const cart = this.state.cart.filter(dish => {
-        console.log("dish: " + dish.name + " item: " + item.name);
+    let empty = prevState.filter(dish => dish.name === item[0].name);
+    // let cartTotal = this.state.cartTotal;
 
-        return dish.name !== item.name;
+    if (empty === undefined || empty.length === 0) {
+      this.setState({
+        cart: [...prevState, ...item],
+        cartTotal: this.state.cartTotal + parseFloat(item[0].price)
       });
-      console.log("not correct: " + cart);
-      this.setState({ cart });
+    } else {
+      const cart = this.state.cart.filter(dish => dish.name !== item[0].name);
+      this.setState({
+        cart,
+        cartTotal: this.state.cartTotal - parseFloat(item[0].price)
+      });
     }
-    // console.log("empty: " + empty);
-    // if (!prevState.includes(item)) {
-    //   this.setState({ cart: [...prevState, ...item] });
-    // } else {
-    //   console.log("not correct: ");
-
-    //   const cart = this.state.cart.filter(dish => {
-    //     console.log("dish: " + dish + " item: " + item);
-    //     return dish.name !== item.name;
-    //   });
-    //   this.setState({ cart });
-    // }
     console.log(this.state.cart);
+    console.log(this.state.cartTotal);
   }
 
   render() {
@@ -63,7 +53,7 @@ class DishesIndex extends Component {
             updateCart={this.UpdateCart}
             cart={this.state.cart}
           />
-          <Cart cart={this.state.cart} />
+          <Cart cart={this.state.cart} total={this.state.cartTotal} />
         </div>
       </section>
       // </Layout>

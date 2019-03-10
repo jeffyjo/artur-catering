@@ -13,7 +13,7 @@ const Dish = class extends React.Component {
   }
 
   updateDish() {
-    const { name, price, type } = this.props;
+    const { name, price, type, id } = this.props;
 
     this.setState({
       active: !this.state.active
@@ -22,7 +22,8 @@ const Dish = class extends React.Component {
     const props = {
       name,
       price,
-      type
+      type,
+      id
     };
     this.props.update([...props]);
   }
@@ -41,6 +42,7 @@ const Dish = class extends React.Component {
 };
 
 Dish.propTypes = {
+  nid: PropTypes.number,
   name: PropTypes.string,
   price: PropTypes.number,
   active: PropTypes.bool,
