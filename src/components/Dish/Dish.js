@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 const Dish = class extends React.Component {
@@ -13,10 +13,18 @@ const Dish = class extends React.Component {
   }
 
   updateDish() {
+    const { name, price, type } = this.props;
+
     this.setState({
       active: !this.state.active
     });
-    this.props.update(this.props.name);
+    console.log("My props: " + JSON.stringify(this.props));
+    const props = {
+      name,
+      price,
+      type
+    };
+    this.props.update([...props]);
   }
 
   render() {
@@ -24,7 +32,9 @@ const Dish = class extends React.Component {
       <div>
         <h1>{this.props.name}</h1>
         <h2>{this.props.price}</h2>
-        <button type="button">{!this.state.active ? "Add" : "Remove"}</button>
+        <button type="button" onClick={this.updateDish}>
+          {!this.state.active ? "Add" : "Remove"}
+        </button>
       </div>
     );
   }

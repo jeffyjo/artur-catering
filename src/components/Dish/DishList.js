@@ -15,27 +15,8 @@ const DishList = class extends React.Component {
     super(props);
     this.state = {
       filter: FilterEnum.NONE
-      // active: []
     };
-    // this.updateDish = this.updateDish.bind(this);
   }
-
-  // updateDish(name) {
-  //   const prevState = this.state.active;
-  //   console.log("before" + JSON.stringify(prevState));
-  //   let newState;
-  //   if (!prevState.includes(name)) {
-  //     this.setState({ active: [...prevState, name] });
-  //   } else {
-  //     this.setState(state => {
-  //       const active = state.active.filter(item => item != name);
-  //       return {
-  //         active
-  //       };
-  //     });
-  //   }
-  //   JSON.stringify(newState);
-  // }
 
   render() {
     const { dishes } = this.props;
@@ -45,22 +26,12 @@ const DishList = class extends React.Component {
         <form>
           {dishes.map((dish, index) => (
             <div key={index}>
-              {/* <Dish
+              <Dish
                 name={dish.name}
                 price={dish.price}
                 update={this.props.updateCart}
-                value={this.state.active}
-              /> */}
-              <div>
-                <h1>{dish.name}</h1>
-                <h2>{dish.price}</h2>
-                <button
-                  type="button"
-                  onClick={() => this.props.updateCart(dish.name)}
-                >
-                  {this.props.cart.includes(this.props.name) ? "Remove" : "Add"}
-                </button>
-              </div>
+                value={this.props.cart}
+              />
             </div>
           ))}
           {JSON.stringify(this.state.active)}

@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 const Cart = class extends React.Component {
@@ -10,6 +10,11 @@ const Cart = class extends React.Component {
     return (
       <div>
         <h1>Hello Cart</h1>
+        {this.props.cart.map((item, index) => (
+          <div key={index}>
+            <h1>{item.name}</h1>
+          </div>
+        ))}
         {JSON.stringify(this.props.cart)}
       </div>
     );
@@ -17,6 +22,6 @@ const Cart = class extends React.Component {
 };
 
 Cart.propTypes = {
-  cart: PropTypes.array
+  cart: PropTypes.arrayOf(PropTypes.object)
 };
 export default Cart;

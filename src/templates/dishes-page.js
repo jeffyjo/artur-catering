@@ -5,7 +5,6 @@ import Layout from "../components/Util/Layout";
 import Sidebar from "../components/Sidebar/Sidebar";
 import DishList from "../components/Dish/DishList";
 
-import { createGroupedArray } from "../utils/createGroupedArray";
 import { graphql } from "gatsby";
 import Cart from "../components/Cart/Cart";
 
@@ -22,19 +21,32 @@ class DishesIndex extends Component {
   UpdateCart(item) {
     const prevState = this.state.cart;
     console.log(item);
-    console.log("before" + JSON.stringify(prevState));
-    let newState;
-    if (!prevState.includes(item)) {
-      this.setState({ cart: [...prevState, item] });
+    let empty = prevState.filter(dish => dish.name !== item.name);
+    console.log("Empty: " + empty);
+    // console.log("1: " + )
+    if (empty === undefined || empty.length == 0) {
+      this.setState({ cart: [...prevState, ...item] });
     } else {
-      this.setState(state => {
-        const cart = state.cart.filter(dish => dish !== item);
-        console.log(cart);
-        return {
-          cart
-        };
+      const cart = this.state.cart.filter(dish => {
+        console.log("dish: " + dish.name + " item: " + item.name);
+
+        return dish.name !== item.name;
       });
+      console.log("not correct: " + cart);
+      this.setState({ cart });
     }
+    // console.log("empty: " + empty);
+    // if (!prevState.includes(item)) {
+    //   this.setState({ cart: [...prevState, ...item] });
+    // } else {
+    //   console.log("not correct: ");
+
+    //   const cart = this.state.cart.filter(dish => {
+    //     console.log("dish: " + dish + " item: " + item);
+    //     return dish.name !== item.name;
+    //   });
+    //   this.setState({ cart });
+    // }
     console.log(this.state.cart);
   }
 
