@@ -20,7 +20,7 @@ collections:
   #     - {label: "Tags", name: "tags", widget: "list"}
   - name: "Dishes"
     label: "Dishes"
-    folder: "src/pages/dish"
+    folder: "src/pages/dishes"
     create: true
     fields:
       - {label: "Name", name: "name", widget: "string"}
