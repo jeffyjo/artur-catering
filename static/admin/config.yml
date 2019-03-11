@@ -20,8 +20,9 @@ collections:
   #     - {label: "Tags", name: "tags", widget: "list"}
   - name: "Dishes"
     label: "Dishes"
-    folder: "src/pages/dish"
+    folder: "src/pages/dishes"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Price", name: "price", widget: "number"}
