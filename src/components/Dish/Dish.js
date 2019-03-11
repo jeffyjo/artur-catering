@@ -13,7 +13,7 @@ const Dish = class extends React.Component {
   }
 
   updateDish() {
-    const { name, price, type, id } = this.props;
+    const { name, price, type, id, update } = this.props;
 
     this.setState({
       active: !this.state.active
@@ -25,14 +25,16 @@ const Dish = class extends React.Component {
       type,
       id
     };
-    this.props.update([...props]);
+    update([...props]);
   }
 
   render() {
+    const { name, price, active } = this.props;
+
     return (
       <div>
-        <h1>{this.props.name}</h1>
-        <h2>{this.props.price}</h2>
+        <h1>{name}</h1>
+        <h2>{price}</h2>
         <button type="button" onClick={this.updateDish}>
           {!this.state.active ? "Add" : "Remove"}
         </button>
