@@ -18,6 +18,7 @@ const Dish = class extends React.Component {
     this.setState({
       active: !this.state.active
     });
+    console.log(this.state.active);
     console.log("My props: " + JSON.stringify(this.props));
     const props = {
       name,

@@ -36,8 +36,8 @@ class DishesIndex extends Component {
         cartTotal: this.state.cartTotal - parseFloat(item[0].price)
       });
     }
-    console.log(this.state.cart);
-    console.log(this.state.cartTotal);
+    // console.log(this.state.cart);
+    // console.log(this.state.cartTotal);
   }
 
   render() {
