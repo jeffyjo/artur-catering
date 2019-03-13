@@ -1,5 +1,5 @@
 
-/* Mixin for settings different styles for different breakpoints */
+/* Mixin for setting different styles for different breakpoints */
 
 @mixin sm {
     @media screen and (min-width: $breakpoint--sm){
