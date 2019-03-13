@@ -20,7 +20,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 						</h2>
 
 						{/* Should be dynamic and looped */}
-						<div className="u-grid u-grid--column u-grid--center u-grid@tablet--row u-grid@tablet--space-around">
+						<div className="section u-grid u-grid--column u-grid--center u-grid@tablet--row u-grid@tablet--space-around">
 							<Avatar />
 							<Avatar />
 							<Avatar />
