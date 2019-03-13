@@ -1,17 +1,26 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import Sidebar from '../../components/Sidebar/Sidebar'
 import Layout from '../../components/Util/Layout'
+import Plan from '../../components/Plan/Plan';
 
 class PlansIndex extends Component {
 	render() {
 		return (
 			<Layout>
-				<section className="u-section">
-					<div className="columns is-desktop">
-						<Sidebar className="column is-one-quarter" />
-						<div className="container column is-three-quarters">Plans</div>
+				<section className="section">
+					<div className="is-desktop">
+						<div className="container">
+							<h1 className="title u-align--center">Plans</h1>
+
+							{/* subnav */}
+
+							<Plan />
+							<Plan />
+							<Plan />
+
+						
+						</div>
 					</div>
 				</section>
 			</Layout>

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import Layout from "../components/Util/Layout";
-import Sidebar from "../components/Sidebar/Sidebar";
 import DishList from "../components/Dish/DishList";
 
 import { graphql } from "gatsby";
@@ -47,7 +46,6 @@ class DishesIndex extends Component {
       // <Layout>
       <section className="u-section">
         <div className="columns is-desktop">
-          <Sidebar className="column is-one-quarter" />
           <DishList
             dishes={dishes}
             updateCart={this.UpdateCart}

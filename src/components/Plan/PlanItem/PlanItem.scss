@@ -1,0 +1,17 @@
+.o-plan-item {
+    margin: 4em 0;
+}
+
+.o-plan-item__inner {
+    display: flex;
+    flex-direction: row;
+}
+
+.o-plan-item__inner-image {
+    max-width: 10em;
+    max-height: 10em;
+}
+
+.o-plan-item__inner-content {
+    margin-left: 2em;
+}
