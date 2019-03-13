@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+import Spot from '../components/Spot/Spot'
 import Layout from '../components/Util/Layout'
 
 export const IndexPageTemplate = ({
@@ -15,7 +16,9 @@ export const IndexPageTemplate = ({
 	main,
 }) => (
 		<div>
-			Home		
+			<Spot />		
+			<Spot className="o-spot--reverse" />		
+			<Spot />		
 		</div>
 )
 
