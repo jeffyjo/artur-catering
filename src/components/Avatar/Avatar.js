@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 import './Avatar.scss'
 
+// TODO: Should be using dynamic content
 const Avatar = ({ src, imageTitle, header, decsription }) => {
-
     return (
         <div className="o-avatar">
             <img className="o-avatar__image" src="https://via.placeholder.com/150" title="avatar" />

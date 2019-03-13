@@ -5,6 +5,7 @@ import Partner from './Partner/Partner'
 
 import './Partners.scss'
 
+// TODO: Should be using dynamic content
 const Partners = ({ partners }) => {
     return (
         <div className="o-partners">
