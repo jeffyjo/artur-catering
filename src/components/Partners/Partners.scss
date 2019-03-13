@@ -1,0 +1,19 @@
+@import '../../styles/all';
+
+.o-partners {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include md {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.o-partners__partner {
+    flex: 1 1 33.3333333333%;
+    padding: 2em;
+}
