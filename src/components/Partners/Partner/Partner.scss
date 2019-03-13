@@ -1,0 +1,13 @@
+.m-partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.m-partner__image {
+    max-width: 12em;
+}
+
+.m-partner__title {
+    font-weight: 600;
+}
