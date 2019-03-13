@@ -1,0 +1,32 @@
+.u-align {
+
+    &--left {
+        text-align: left;
+    }
+
+    &--right {
+        text-align: right;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    /* Device modifier */
+    &\@desktop {
+        @include lg {
+            &--left {
+                text-align: left;
+            }
+            
+            &--right {
+                text-align: right;
+            }
+            
+            &--center {
+                text-align: center;
+            }
+        }
+    }
+
+}
