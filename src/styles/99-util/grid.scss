@@ -1,0 +1,53 @@
+.u-grid {
+    display: flex;
+
+    &--row {
+        flex-direction: row;
+    }
+
+    &--column {
+        flex-direction: column;
+    }
+    
+    &--space-around {
+        justify-content: space-around;
+    }
+
+    &--center {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* device modifiers */
+    &\@tablet {
+        @include md {
+            &--column {
+                flex-direction: column;
+            }
+
+            &--row {
+                flex-direction: row;
+            }
+
+            &--space-around {
+                justify-content: space-around;
+            }
+        }
+    }
+
+    &\@desktop {
+        @include lg {
+            &--column {
+                flex-direction: column;
+            }
+
+            &--row {
+                flex-direction: row;
+            }
+
+            &--space-around {
+                justify-content: space-around;
+            }
+        }
+    }
+}

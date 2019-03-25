@@ -1,0 +1,50 @@
+@import '../../styles/00-settings/breakpoints';
+@import '../../styles/01-tools/mixins';
+
+.o-spot {
+    display: flex;
+    flex-direction: column;
+
+    @include lg {
+        flex-direction: row;
+    }
+
+    /* position modifiers */
+    & .o-spot__image-wrapper {
+        @include lg {
+            justify-content: flex-end;
+        }
+    }
+
+    &--reverse {
+        @include lg {
+            flex-direction: row-reverse;
+            
+            .o-spot__image-wrapper {
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+.o-spot__content {
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    flex: 1 1 100%;
+
+    @include lg {
+        flex: 1 1 50%;
+    }
+}
+
+.o-spot__image-wrapper {
+    padding: 2em;
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    
+    @include lg {
+        flex: 1 1 50%;
+    }
+}

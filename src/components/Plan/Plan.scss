@@ -1,0 +1,10 @@
+@import '../../styles/00-settings/breakpoints';
+@import '../../styles/01-tools/mixins';
+
+.o-plan {
+    margin-bottom: 4em;
+
+    @include md {
+        margin-bottom: 8em;
+    }
+}

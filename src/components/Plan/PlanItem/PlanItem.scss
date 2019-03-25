@@ -1,0 +1,34 @@
+@import '../../../styles/00-settings/breakpoints';
+@import '../../../styles/01-tools/mixins';
+
+.o-plan-item {
+    margin: 4em 0;
+}
+
+.o-plan-item__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include md {
+        flex-direction: row;
+        align-items: unset;
+    }
+}
+
+.o-plan-item__inner-image {
+    
+    @include md {
+        max-width: 10em;
+        max-height: 10em;
+    }
+}
+
+.o-plan-item__inner-content {
+    margin-top: 2em;
+    
+    @include md {
+        margin-top: 0;
+        margin-left: 2em;
+    }
+}
