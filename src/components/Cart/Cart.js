@@ -8,14 +8,7 @@ const Cart = class extends React.Component {
     this.state = {
       total: 0
     };
-    // this.printDocument = this.printDocument.bind(this);
   }
-
-  // printDocument() {
-  //   const pdf = new jspdf();
-  //   pdf.text("Hello world", 1, 1);
-  //   pdf.save("download.pdf");
-  // }
 
   render() {
     const { total, cart } = this.props;
@@ -37,7 +30,7 @@ const Cart = class extends React.Component {
           {/* {JSON.stringify(cart)} */}
         </div>
         <div>
-          <button >Print</button>
+          <button>Print</button>
         </div>
       </div>
     );

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 import Layout from "../components/Util/Layout";
 import Sidebar from "../components/Sidebar/Sidebar";
-import DishList from "../components/Dish/DishList";
 
 import { graphql } from "gatsby";
 import Plan from "../components/Plan/Plan";
@@ -11,13 +10,17 @@ import Plan from "../components/Plan/Plan";
 class PlansIndex extends Component {
   constructor(props) {
     super(props);
+    this.addToCart = this.addToCart.bind(this);
+  }
+
+  addToCart(pr) {
+    console.log("hello");
   }
 
   render() {
     const { plans } = this.props;
 
     return (
-      // <Layout>
       <section className="u-section">
         <div className="columns is-desktop">
           <Sidebar className="column is-one-quarter" />
@@ -29,20 +32,27 @@ class PlansIndex extends Component {
                 appetizers={plan.appetizers}
                 mains={plan.mains}
                 desserts={plan.desserts}
+                addToCart={this.addToCart}
               />
             </div>
           ))}
-          <Plan />
           {/* <Cart cart={this.state.cart} total={this.state.cartTotal} /> */}
         </div>
       </section>
-      // </Layout>
     );
   }
 }
 
 PlansIndex.propTypes = {
-  plans: PropTypes.array
+  plans: PropTypes.arrayOf(
+    PropTypes.objectOf({
+      name: PropTypes.string,
+      price: PropTypes.number,
+      appetizers: PropTypes.array,
+      mains: PropTypes.array,
+      desserts: PropTypes.array
+    })
+  )
 };
 
 const PlansPage = ({ data }) => {

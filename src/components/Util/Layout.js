@@ -1,13 +1,13 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React from "react";
+import Helmet from "react-helmet";
+import { StaticQuery, graphql } from "gatsby";
 
-import Navbar from '../Navbar/Navbar'
-import Footer from '../Footer/Footer'
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
-import '../../styles/all.scss'
+import "../../styles/all.scss";
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, cartUpdate }) => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -59,8 +59,12 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
 
-          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous"
+          />
         </Helmet>
         <Navbar />
         <div>{children}</div>
@@ -68,6 +72,6 @@ const TemplateWrapper = ({ children }) => (
       </div>
     )}
   />
-)
+);
 
-export default TemplateWrapper
+export default TemplateWrapper;

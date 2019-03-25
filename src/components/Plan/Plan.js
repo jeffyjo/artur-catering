@@ -7,6 +7,7 @@ const Plan = class extends React.Component {
 
     this.displayAllDishes = this.displayAllDishes.bind(this);
     this.displayFirstDish = this.displayFirstDish.bind(this);
+    this.goToCart = this.goToCart.bind(this);
   }
 
   displayFirstDish(arr) {
@@ -25,19 +26,24 @@ const Plan = class extends React.Component {
   }
 
   displayAllDishes(arr) {
-    if (arr === undefined) return;
+    console.log(arr);
+    if (arr === "undefined") return;
 
-    if (arr.some()) {
+    if (arr) {
       return (
         <div>
           {arr.map((item, index) => (
-            <div>
-              <p>{item.name}</p>
+            <div key={index}>
+              <h1>{item.name}</h1>
             </div>
           ))}
         </div>
       );
     }
+  }
+
+  goToCart() {
+    this.props.addToCart(this.props);
   }
 
   render() {
@@ -53,19 +59,21 @@ const Plan = class extends React.Component {
     return (
       <div>
         <h1>{name}</h1>
-        <h2>{price}</h2>
+
         <div id="appetizers">
           <h3>Appetizers</h3>
-          {this.displayFirstDish(appetizers)}
+          {this.displayAllDishes(appetizers)}
         </div>
         <div id="mains">
           <h3>Mains</h3>
-          {this.displayFirstDish(mains)}
+          {this.displayAllDishes(mains)}
         </div>
         <div id="desserts">
           <h3>Desserts</h3>
-          {this.displayFirstDish(desserts)}
+          {this.displayAllDishes(desserts)}
         </div>
+        <h2>{price} DKK</h2>
+        <button onClick={this.goToCart}>Add to cart</button>
       </div>
     );
   }
@@ -74,11 +82,23 @@ const Plan = class extends React.Component {
 Plan.propType = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  appetizers: PropTypes.arrayOf(PropTypes.object),
-  mains: PropTypes.arrayOf(PropTypes.object),
-  desserts: PropTypes.arrayOf(PropTypes.object),
+  appetizers: PropTypes.arrayOf(
+    PropTypes.objectOf({
+      name: PropTypes.string
+    })
+  ),
+  mains: PropTypes.arrayOf(
+    PropTypes.objectOf({
+      name: PropTypes.string
+    })
+  ),
+  desserts: PropTypes.arrayOf(
+    PropTypes.objectOf({
+      name: PropTypes.string
+    })
+  ),
   drinks: PropTypes.array,
-  addToCart: PropTypes.func
+  addToCart: PropTypes.func.isRequired
 };
 
 export default Plan;
