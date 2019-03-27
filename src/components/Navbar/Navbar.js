@@ -61,6 +61,11 @@ const Navbar = class extends React.Component {
                 Contact
               </Link>
             </div>
+            <div className="navbar-end has-text-centered">
+              <Link className="navbar-item m-navbar-item" to="/cart">
+                <i className="fas fa-shopping-cart m-navbar-item__icon"></i>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
