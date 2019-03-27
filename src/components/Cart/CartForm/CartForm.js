@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { navigate } from 'gatsby-link'
-import Layout from '../../Util/Layout'
 
 export default class CartForm extends Component {
 	constructor(props) {
@@ -26,25 +24,49 @@ export default class CartForm extends Component {
         <div className="field">
           <label>Name</label>
           <div className="control">
-            <input className="input" type="text" />
+            <input
+              className="input"
+              type={'text'}
+              name={'name'}
+              id={'cartName'}
+              required={true}
+            />
           </div>
         </div>
         <div className="field">
           <label>Email</label>
           <div className="control">
-            <input className="input" type="email" />
+            <input
+              className="input"
+              type={'email'}
+              name={'email'}
+              id={'cartEmail'}
+              required={true}
+            />
           </div>
         </div>
         <div className="field">
           <label>Date</label>
           <div className="control">
-            <input className="input" type="date" />
+            <input
+              className="input"
+              type={'date'}
+              name={'date'}
+              id={'cartDate'}
+              required={true}
+            />
           </div>
         </div>
         <div className="field">
           <label>Time</label>
           <div className="control">
-            <input className="input" type="time" />
+            <input
+              className="input"
+              type={'time'}
+              name={'time'}
+              id={'cartTime'}
+              required={true}
+            />
           </div>
         </div>
         <div className="field">
@@ -54,6 +76,9 @@ export default class CartForm extends Component {
           <div className="control">
             <textarea
               className="textarea"
+              name={'message'}
+              id={'cartMessage'}
+              required={true}
             />
           </div>
         </div>

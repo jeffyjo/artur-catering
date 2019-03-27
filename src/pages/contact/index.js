@@ -66,7 +66,7 @@ export default class Index extends React.Component {
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
-                      id={'name'}
+                      id={'contactName'}
                       required={true}
                     />
                   </div>
@@ -81,7 +81,7 @@ export default class Index extends React.Component {
                       type={'email'}
                       name={'email'}
                       onChange={this.handleChange}
-                      id={'email'}
+                      id={'contactEmail'}
                       required={true}
                     />
                   </div>
@@ -95,7 +95,7 @@ export default class Index extends React.Component {
                       className="textarea"
                       name={'message'}
                       onChange={this.handleChange}
-                      id={'message'}
+                      id={'contactMessage'}
                       required={true}
                     />
                   </div>
