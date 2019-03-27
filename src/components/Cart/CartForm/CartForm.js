@@ -22,7 +22,7 @@ export default class CartForm extends Component {
           </label>
         </div>
         <div className="field">
-          <label>Name</label>
+          <label className="label" htmlFor={'cartName'} >Name</label>
           <div className="control">
             <input
               className="input"
@@ -34,7 +34,7 @@ export default class CartForm extends Component {
           </div>
         </div>
         <div className="field">
-          <label>Email</label>
+          <label className="label" htmlFor={'cartEmail'}>Email</label>
           <div className="control">
             <input
               className="input"
@@ -46,7 +46,7 @@ export default class CartForm extends Component {
           </div>
         </div>
         <div className="field">
-          <label>Date</label>
+          <label className="label" htmlFor={'cartDate'}>Date</label>
           <div className="control">
             <input
               className="input"
@@ -58,7 +58,7 @@ export default class CartForm extends Component {
           </div>
         </div>
         <div className="field">
-          <label>Time</label>
+          <label className="label" htmlFor={'cartTime'}>Time</label>
           <div className="control">
             <input
               className="input"
@@ -70,7 +70,7 @@ export default class CartForm extends Component {
           </div>
         </div>
         <div className="field">
-          <label className="label" htmlFor={'message'}>
+          <label className="label" htmlFor={'cartMessage'}>
             Message
           </label>
           <div className="control">
