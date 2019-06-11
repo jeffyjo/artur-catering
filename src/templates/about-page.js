@@ -78,28 +78,29 @@ export const aboutPageQuery = graphql`
 			frontmatter {
 				title 
 				avatars {
-					image {
-					  childImageSharp {
-							fixed {
-								src
-							}
+					avatar {
+					  image {
+						src {
+						  id
+						}
+						alt
 					  }
+					  header
+					  description
 					}
-					text
-					header
-					description
-				  
-				}
-				partners {
-					image {
-					  childImageSharp {
-							fixed {
-								src
-							}
+				  }
+				  partners {
+					partner {
+					  image {
+						src {
+						  id
+						}
+						alt
 					  }
+					  imageTitle
+					  partnerName
 					}
-					text
-					partnerName
+				
 				}
 			}
 		}
