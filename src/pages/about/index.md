@@ -2,11 +2,12 @@
 templateKey: about-page
 title: About our values
 avatars:
-    - image: 
-        src: /img/coffee.png
-        alt: Alt text
-      header: "Header"
-      description: "test"
+    - avatar:
+        image: 
+          src: /img/coffee.png
+          alt: Alt text
+        header: "Header"
+        description: "test"
 partners:
     - partner:
         image:
