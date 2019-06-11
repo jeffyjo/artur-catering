@@ -65,6 +65,23 @@ collections:
                       - {label: "Alt", name: "alt", widget: "string"}
                   - {label: "Header", name: "header", widget: "string"}
                   - {label: "Description", name: "description", widget: "string"}
+          - {label: "Body", name: "body", widget: markdown}
+          - label: "Partners"
+            name: "partners"
+            widget: "list"
+            fields: 
+              - label: "Partner"
+                name: "partner"
+                widget: "object"
+                fields: 
+                  - label: "Image"
+                    name: "image"
+                    widget: "object" 
+                    fields: 
+                      - {label: "ImageSrc", name: "src", widget: "image"}
+                      - {label: "Alt", name: "alt", widget: "string"}
+                  - {label: "ImageTitle", name: "imageTitle", widget: "string"}
+                  - {label: "PartnerName", name: "partnerName", widget: "string"}
           # - {label: "Avatars", name: "avatars", widget: object, fields: {label: "Avatar", name: "avatar", widget: "list", fields: [{label: "Image", name: "image", widget: "object", fields: [{label: "Image Src", name: "src", widget: image}, {label: "Alternative Text", name: "alt", widget: string}]}, {label: "Image Title", name: "imageTitle", widget: "string"}, {label: "Header", name: "header", widget: "string"}, {label: "Description", name: "description", widget: "markdown"}]}}
           # - {label: "Body", name: "body", widget: markdown}
           # - {label: "Partners", name: "partners", widget: list, fields: {label: "Partner", name: "partner", widget: "object", fields: [{label: "Image", name: "image", widget: "object", fields: [{label: "Image Src", name: "src", widget: image}, {label: "Alternative Text", name: "alt", widget: string}]},{label: "Image Title", name: "imageTitle", widget: "string"},{label: "Partner Name", name: "partnerName", widget: "string"}]}}
