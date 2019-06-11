@@ -7,7 +7,7 @@ import Content, { HTMLContent } from '../components/Util/Content'
 import Avatar from '../components/Avatar/Avatar';
 import Partners from '../components/Partners/Partners'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ title, content, contentComponent, avatars, partners }) => {
 	const PageContent = contentComponent || Content
 
 	return (
@@ -21,9 +21,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
 						{/* Should be dynamic and looped */}
 						<div className="section u-grid u-grid--column u-grid--center u-grid@tablet--row u-grid@tablet--space-around">
-							<Avatar />
-							<Avatar />
-							<Avatar />
+							{avatars.map((avatar, index)=> (
+								<Avatar image={avatar.image} imageTitle={avatar.text} header={avatar.imageTitle} decsription={avatar.decsription} key={index}/>
+							 ) )}
 						</div>
 
 						<div className="section">
@@ -31,7 +31,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 						</div>
 
 						<div>
-							<Partners />
+							<Partners partners={partners} />
 						</div>
 
 					</div>
@@ -45,6 +45,8 @@ AboutPageTemplate.propTypes = {
 	title: PropTypes.string.isRequired,
 	content: PropTypes.string,
 	contentComponent: PropTypes.func,
+	avatars: PropTypes.array,
+	partners: PropTypes.array
 }
 
 const AboutPage = ({ data }) => {
@@ -56,6 +58,8 @@ const AboutPage = ({ data }) => {
 				contentComponent={HTMLContent}
 				title={post.frontmatter.title}
 				content={post.html}
+				avatars={post.frontmatter.avatars}
+				partners={post.frontmatter.partners}
 			/>
 		</Layout>
 	)
@@ -72,7 +76,31 @@ export const aboutPageQuery = graphql`
 		markdownRemark(id: { eq: $id }) {
 			html
 			frontmatter {
-				title
+				title 
+				avatars {
+					image {
+					  childImageSharp {
+						fixed {
+						  src
+						}
+					  }
+					}
+					text
+					header
+					description
+				  
+				}
+				partners {
+					image {
+					  childImageSharp {
+						fixed {
+						  src
+						}
+					  }
+					}
+					text
+					partnerName
+				}
 			}
 		}
 	}

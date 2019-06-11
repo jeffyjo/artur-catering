@@ -5,7 +5,7 @@ import './Image.scss'
 
 const Image = ({ src, title, className }) => (
     // <img className="a-image" src={src} title={title} />
-    <img className={`a-image ${className}`} src="https://via.placeholder.com/400" title="title" />
+    <img className={`a-image ${className}`} src="https://via.placeholder.com/400" title="title" alt="title" />
 )
 
 Image.propTypes = {

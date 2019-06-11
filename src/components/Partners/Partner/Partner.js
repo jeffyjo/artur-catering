@@ -6,16 +6,17 @@ import Image from '../../Image/Image'
 import './Partner.scss'
 
 // TODO: Should be using dynamic content
-const Partner = ({ src, imageTitle, partnerName, className }) => (
+const Partner = ({ image, imageTitle, partnerName, className }) => (
     <div className={`m-partner ${className}`}>
-        <Image className="m-partner__image" src={src} title={imageTitle} />
+        {console.log(image)}
+        <Image className="m-partner__image" src={image.childImageSharp.fixed.src} title={imageTitle} />
         {/* <h4 className="m-partner__title">{partnerName}</h4> */}
-        <h4 className="m-partner__title">Partner</h4>
+        <h4 className="m-partner__title">{partnerName}</h4>
     </div>
 )
 
 Partner.propTypes = {
-    src: PropTypes.string,
+    image: PropTypes.object,
     imageTitle: PropTypes.string,
     partnerName: PropTypes.string
 }

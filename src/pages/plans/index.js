@@ -28,8 +28,8 @@ class PlansIndex extends Component {
 	}
 }
 
-PlansIndex.propTypes = {
+// PlansIndex.propTypes = {
 
-}
+// }
 
 export default PlansIndex
