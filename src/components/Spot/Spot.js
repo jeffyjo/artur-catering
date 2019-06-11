@@ -12,7 +12,7 @@ const Spot = ({ src, title, contentComponent, className }) => {
     return (
         <div className={`o-spot ${className ? className : ''}`}> 
             {/* <PageContent /> */}
-            <div className="o-spot__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu massa dolor. Nullam in orci magna. Proin non sapien sed felis posuere ultricies sit amet sed diam. Cras vestibulum, urna lacinia feugiat congue, diam tellus elementum nulla, eget euismod lectus arcu vitae odio. Cras ac euismod nunc. Aenean pellentesque, nisl ut rhoncus convallis, velit sem ullamcorper sem, eu facilisis neque ante vitae diam. Fusce et ipsum non turpis varius pretium vitae quis purus.</div>
+            <div className="o-spot__content">{PageContent}</div>
             
             <div className="o-spot__image-wrapper">
                 <Image src={src} title={title} />

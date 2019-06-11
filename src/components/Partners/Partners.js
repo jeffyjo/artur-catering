@@ -10,18 +10,16 @@ const Partners = ({ partners }) => {
     return (
         <div className="o-partners">
             {/* Should dynamically loop and ouput content */}
-            <Partner className="o-partners__partner" />
-            <Partner className="o-partners__partner" />
-            <Partner className="o-partners__partner" />
-            <Partner className="o-partners__partner" />
-            <Partner className="o-partners__partner" />
+            {partners.map((partner, index) => (
+                <Partner className="o-partners__partner" image={partner.image} imageTitle={partner.imageTitle} partnerName={partner.partnerName} key={index}/>
+            ))}
         </div>
     )
 }
 
 Partners.propTypes = {
     partners: PropTypes.shape({
-        src: PropTypes.string,
+        image: PropTypes.object,
         imageTitle: PropTypes.string,
         partnerName: PropTypes.string
     })
