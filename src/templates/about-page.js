@@ -17,13 +17,14 @@ export const AboutPageTemplate = ({ title, content, contentComponent, avatars, p
 					<div className="column is-10 is-offset-1">
 						<h2 className="u-align--center u-align@desktop--left title is-size-3 has-text-weight-bold is-bold-light">
 								{title}
-						</h2>
-
+						</h2>	
+						{/* {console.log(JSON.stringify(avatars))} */}
 						{/* Should be dynamic and looped */}
 						<div className="section u-grid u-grid--column u-grid--center u-grid@tablet--row u-grid@tablet--space-around">
-							{avatars.map((avatar, index)=> (
-								<Avatar image={avatar.image} imageTitle={avatar.text} header={avatar.imageTitle} decsription={avatar.decsription} key={index}/>
-							 ) )}
+							{avatars.map((avatar, index)=> {
+								const {image, text,imageTitle ,decsription} = avatar.avatar;
+								return <Avatar image={image} imageTitle={text} header={imageTitle} decsription={decsription} key={index}/>
+							 } )}
 						</div>
 
 						<div className="section">
@@ -81,7 +82,11 @@ export const aboutPageQuery = graphql`
 					avatar {
 					  image {
 						src {
-						  id
+							childImageSharp {
+								fixed {
+								  src
+								}
+							}
 						}
 						alt
 					  }
@@ -93,7 +98,11 @@ export const aboutPageQuery = graphql`
 					partner {
 					  image {
 						src {
-						  id
+							childImageSharp {
+								fixed {
+								  src
+								}
+							}
 						}
 						alt
 					  }
