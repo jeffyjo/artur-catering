@@ -7,7 +7,7 @@ const AboutPagePreview = ({ entry }) => (
     title={entry.getIn(['data', 'title'])}
     avatars={entry.getIn(['data', 'avatars'])}
     partners={entry.getIn(['data', 'partners'])}
-    content={entry.getIn(['html'])}
+    content={entry.getIn(['body'])}
   />
 )
 
