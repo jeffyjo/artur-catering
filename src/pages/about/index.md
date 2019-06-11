@@ -12,7 +12,7 @@ avatars:
       header: "Header"
       description: "test"
 partners:
-    - partner:
+      partner:
         image:
           image: /img/coffee.png
           text: >
