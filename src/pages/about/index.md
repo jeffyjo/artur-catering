@@ -2,19 +2,20 @@
 templateKey: about-page
 title: About our values
 avatars:
-    - avatar:
-        image: 
-          src: /img/coffee.png
-          alt: Alt text
-        header: "Header"
-        description: "test"
+  - avatar:
+      description: test
+      header: Header
+      image:
+        alt: Alt text
+        src: >-
+          https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/chemex.jpg
 partners:
-    - partner:
-        image:
-          src: /img/coffee.png
-          alt: Alt text
-        imageTitle: "avatar"
-        partnerName: "Pentia A/S"      
+  - partner:
+      image:
+        alt: Alt text
+        src: /img/coffee.png
+      imageTitle: avatar
+      partnerName: Pentia A/S
 ---
 Testing
 
