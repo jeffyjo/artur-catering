@@ -2,8 +2,7 @@
 templateKey: about-page
 title: About our values
 avatars: 
-    - avatar:
-      image: /img/coffee.png
+    - image: /img/coffee.png
       text: >
             We sell green and roasted coffee beans that are sourced directly from
             independent farmers and farm cooperatives. We’re proud to offer a
@@ -13,8 +12,7 @@ avatars:
       header: "Header"
       description: "test"
 partners:
-    - partner: 
-      image: /img/coffee.png
+    - image: /img/coffee.png
       text: >
             We sell green and roasted coffee beans that are sourced directly from
             independent farmers and farm cooperatives. We’re proud to offer a
@@ -23,8 +21,7 @@ partners:
             availability.
       imageTitle: "avatar"
       partnerName: "Pentia A/S"      
-    - partner: 
-      image: /img/coffee.png
+    - image: /img/coffee.png
       text: >
             We sell green and roasted coffee beans that are sourced directly from
             independent farmers and farm cooperatives. We’re proud to offer a
