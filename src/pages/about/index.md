@@ -1,37 +1,20 @@
 ---
 templateKey: about-page
 title: About our values
-avatars: 
-    - image: /img/coffee.png
-      text: >
-            We sell green and roasted coffee beans that are sourced directly from
-            independent farmers and farm cooperatives. We’re proud to offer a
-            variety of coffee beans grown with great care for the environment and
-            local communities. Check our post or contact us directly for current
-            availability.
-      header: "Header"
-      description: "test"
+avatars:
+    - avatar:
+        image: 
+            src: /img/coffee.png
+            alt: Alt text
+        header: "Header"
+        description: "test"
 partners:
-      partner:
+    - partner:
         image:
-          image: /img/coffee.png
-          text: >
-            We sell green and roasted coffee beans that are sourced directly from
-            independent farmers and farm cooperatives. We’re proud to offer a
-            variety of coffee beans grown with great care for the environment and
-            local communities. Check our post or contact us directly for current
-            availability.
+          src: /img/coffee.png
+          alt: Alt text
         imageTitle: "avatar"
         partnerName: "Pentia A/S"      
-    - image: /img/coffee.png
-      text: >
-            We sell green and roasted coffee beans that are sourced directly from
-            independent farmers and farm cooperatives. We’re proud to offer a
-            variety of coffee beans grown with great care for the environment and
-            local communities. Check our post or contact us directly for current
-            availability.
-      imageTitle: "avatar"
-      partnerName: "Pentia A/S"      
 ---
 Testing
 
