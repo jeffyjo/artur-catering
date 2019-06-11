@@ -80,9 +80,9 @@ export const aboutPageQuery = graphql`
 				avatars {
 					image {
 					  childImageSharp {
-						fixed {
-						  src
-						}
+							fixed {
+								src
+							}
 					  }
 					}
 					text
@@ -93,9 +93,9 @@ export const aboutPageQuery = graphql`
 				partners {
 					image {
 					  childImageSharp {
-						fixed {
-						  src
-						}
+							fixed {
+								src
+							}
 					  }
 					}
 					text

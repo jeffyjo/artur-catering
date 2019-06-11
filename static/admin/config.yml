@@ -49,19 +49,9 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Avatars", name: "avatars", widget: object, fields: [
-            {label: "Image", name: "image", widget: "image"},
-            {label: "Image Title", name: "imageTitle", widget: "string"},
-            {label: "Header", name: "header", widget: "string"},
-            {label: "Description", name: "description", widget: "markdown"}
-          ]}
-          
+          - {label: "Avatars", name: "avatars", widget: object, fields: [{label: "Image", name: "image", widget: "image"}, {label: "Image Title", name: "imageTitle", widget: "string"}, {label: "Header", name: "header", widget: "string"}, {label: "Description", name: "description", widget: "markdown"}]}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Partners", name: "partners", widget: "object", fields: [
-            {label: "Image", name: "image", widget: "image"},
-            {label: "Image Title", name: "imageTitle", widget: "string"},
-            {label: "Partner Name", name: "partnerName", widget: "string"},            
-          ]}
+          - {label: "Partners", name: "partners", widget: "object", fields: [{label: "Image", name: "image", widget: "image"},{label: "Image Title", name: "imageTitle", widget: "string"},{label: "Partner Name", name: "partnerName", widget: "string"}]}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
