@@ -10,7 +10,8 @@ const Avatar = ({ image, imageTitle, header, decsription }) => {
     return (
         <div className="o-avatar">
             {console.log("NY" + JSON.stringify(image))}
-            <Image src={image.src.childImageSharp.fixed.src} title={image.alt} />
+            {/* <Image src={image.src.childImageSharp.fixed.src} title={image.alt} /> */}
+            <Image src={image.src} title={image.alt} />
             {/* <img className="o-avatar__image" src={src} title={imageTitle} /> */}
             <h3 className="o-avatar__header">{header}</h3>
             <p className="o-avatar__description">{decsription}</p>

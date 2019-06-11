@@ -7,14 +7,14 @@ const AboutPagePreview = ({ entry}) => {
   const avatars = entryAvatars ? entryAvatars.toJS() : []
 
   const entryPartners = entry.getIn(['data','partners']);
-  const partners = entryPartners ? entryPartners.toJS() : []
+  const partners = []
 
   return ( 
     <AboutPageTemplate
       title={entry.getIn(['data', 'title'])}
       avatars={avatars}
       partners={partners}
-      content={entry.getIn(['body'])}
+      content=""
     />
   )
 }

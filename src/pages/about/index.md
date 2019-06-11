@@ -13,7 +13,8 @@ partners:
   - partner:
       image:
         alt: Alt text
-        src: /img/coffee.png
+        src: >-
+          https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/chemex.jpg
       imageTitle: avatar
       partnerName: Pentia A/S
 ---

@@ -9,7 +9,8 @@ import './Partner.scss'
 const Partner = ({ image, imageTitle, partnerName, className }) => (
     <div className={`m-partner ${className}`}>
         {console.log(image)}
-        <Image className="m-partner__image" src={image.childImageSharp.fixed.src} title={imageTitle} />
+        {/* <Image className="m-partner__image" src={image.childImageSharp.fixed.src} title={imageTitle} /> */}
+        <Image className="m-partner__image" src={image} title={imageTitle} />
         {/* <h4 className="m-partner__title">{partnerName}</h4> */}
         <h4 className="m-partner__title">{partnerName}</h4>
     </div>
