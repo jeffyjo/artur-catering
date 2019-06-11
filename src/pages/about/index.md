@@ -8,7 +8,7 @@ avatars:
       image:
         alt: Alt text
         src: >-
-          https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/chemex.jpg
+          https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/apple-touch-icon.png
 partners:
   - partner:
       image:
