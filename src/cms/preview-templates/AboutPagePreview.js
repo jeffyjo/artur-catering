@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import { AboutPageTemplate } from '../../templates/about-page'
 
 const AboutPagePreview = ({ entry }) => (
- <h1>hello</h1>
+  <AboutPageTemplate
+    title={entry.getIn(['data', 'title'])}
+    avatars={entry.getIn(['data', 'avatars'])}
+    partners={entry.getIn(['data', 'partners'])}
+    content={entry.getIn(['html'])}
+  />
 )
 
 AboutPagePreview.propTypes = {
