@@ -13,7 +13,7 @@ class Form extends Component {
           <div className="container">
             <div className="content">
               <h1>Your details</h1>
-              <Cart cart={getStorage()} />
+              <Cart />
               <CartForm />
             </div>
           </div>

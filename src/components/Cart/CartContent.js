@@ -5,11 +5,24 @@ import { getStorage } from "../Util/util";
 class CartContent extends Component {
   super(props) {
     this.super(props);
+    this.state = {
+      cart: ""
+    };
+  }
+  componentWillMount() {
+    this.setState({ cart: "" });
+  }
+
+  componentDidMount() {
+    this.setState({ cart: getStorage() });
   }
 
   render() {
-    const cart = getStorage();
-    if (Array.isArray(cart)) {
+    const { cart } = this.state;
+    // const cart = getStorage();
+    if (cart === "") return <div />;
+    // return <div />;
+    if (Array.isArray(this.state.cart)) {
       return (
         <div>
           {cart.map((item, index) => (
