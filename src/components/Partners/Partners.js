@@ -9,15 +9,16 @@ import './Partners.scss'
 const Partners = ({ partners }) => {
     return (
         <div className="o-partners">
-            {/* Should dynamically loop and ouput content */}
-            {partners.map((partner, index) => {
-                console.log(partner.partner + "___:partner")
-                return <Partner className="o-partners__partner" image={partner.partner.image.src} imageTitle={partner.imageTitle} partnerName={partner.partnerName} key={index}/>
-            })}
+           {partners.map((partner, index) => {
+        console.log(partner.partner + "___:partner")
+        const {image, imageTitle,partnerName} = partner.partner;
+        if(image.src === null) return "";
+        return <Partner className="o-partners__partner" image={image.src} imageTitle={imageTitle} partnerName={partnerName} key={index}/>
+        })}
         </div>
     )
 }
-
+ 
 Partners.propTypes = {
     partners: PropTypes.any
 }
