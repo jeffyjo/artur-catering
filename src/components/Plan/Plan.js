@@ -14,16 +14,12 @@ class Plan extends Component {
   }
 
   addToCart(plan) {
-    console.log("hello");
     const cartItem = { amount: 1, plan: plan };
     // console.log(findInStorage(plan.name));
     var res = findInStorage(plan.name);
-    console.log(res);
     if (res) {
-      console.log("remove");
       removeFromStorage(cartItem);
     } else {
-      console.log("add");
       setStorage(cartItem);
     }
   }

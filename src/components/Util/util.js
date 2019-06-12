@@ -39,7 +39,9 @@ export const removeFromStorage = json => {
  * Get data from sessionStorage
  * @returns {json} cartItems
  */
-export const getStorage = () => strToJson(localStorage.getItem(STORAGE_KEY));
+export const getStorage = () => {
+  return strToJson(localStorage.getItem(STORAGE_KEY));
+};
 
 export function findInStorage(name) {
   const json = getStorage();
