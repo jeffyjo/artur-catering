@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { getStorage } from "../Util/util";
 import CartContent from "./CartContent";
 // import * as jspdf from "jspdf";
 

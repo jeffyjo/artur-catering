@@ -6,10 +6,6 @@ import Cart from "../../components/Cart/Cart";
 import { getStorage } from "../../components/Util/util";
 
 class Form extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Layout>

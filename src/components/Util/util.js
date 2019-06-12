@@ -29,6 +29,7 @@ export const removeFromStorage = json => {
         delete storage[index];
         localStorage.setItem(STORAGE_KEY, jsonToStr(json));
       }
+      return 1;
     });
   } else {
     localStorage.clear();

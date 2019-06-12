@@ -1,11 +1,7 @@
-import React from 'react'
-import Layout from '../../components/Util/Layout'
+import React from "react";
+import Layout from "../../components/Util/Layout";
 
 export default class Index extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <Layout>
@@ -24,47 +20,46 @@ export default class Index extends React.Component {
                 <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
                   <label>
-                    Don’t fill this out:{' '}
-                    <input name="bot-field" />
+                    Don’t fill this out: <input name="bot-field" />
                   </label>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'contactName'}>
+                  <label className="label" htmlFor={"contactName"}>
                     Your name
                   </label>
                   <div className="control">
                     <input
                       className="input"
-                      type={'text'}
-                      name={'name'}
-                      id={'contactName'}
+                      type={"text"}
+                      name={"name"}
+                      id={"contactName"}
                       required={true}
                     />
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'contactEmail'}>
+                  <label className="label" htmlFor={"contactEmail"}>
                     Email
                   </label>
                   <div className="control">
                     <input
                       className="input"
-                      type={'email'}
-                      name={'email'}
-                      id={'contactEmail'}
+                      type={"email"}
+                      name={"email"}
+                      id={"contactEmail"}
                       required={true}
                     />
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'contactMessage'}>
+                  <label className="label" htmlFor={"contactMessage"}>
                     Message
                   </label>
                   <div className="control">
                     <textarea
                       className="textarea"
-                      name={'message'}
-                      id={'contactMessage'}
+                      name={"message"}
+                      id={"contactMessage"}
                       required={true}
                     />
                   </div>
@@ -79,6 +74,6 @@ export default class Index extends React.Component {
           </div>
         </section>
       </Layout>
-    )
+    );
   }
 }
