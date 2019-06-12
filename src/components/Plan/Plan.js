@@ -16,12 +16,16 @@ class Plan extends Component {
   addToCart(plan) {
     console.log("hello");
     const cartItem = { amount: 1, plan: plan };
-    if (findInStorage(plan.name)) {
+    // console.log(findInStorage(plan.name));
+    var res = findInStorage(plan.name);
+    console.log(res);
+    if (res) {
+      console.log("remove");
       removeFromStorage(cartItem);
     } else {
+      console.log("add");
       setStorage(cartItem);
     }
-    console.log(findInStorage(plan.name));
   }
 
   render() {
@@ -45,7 +49,7 @@ class Plan extends Component {
           ))}
         </ul>
         <h3>{price} DKK</h3>
-        <button onClickCapture={() => this.addToCart(this.props)}>
+        <button onClick={() => this.addToCart(this.props)}>
           {findInStorage(name) ? "Remove From Cart" : "Add to Cart"}
         </button>
       </div>

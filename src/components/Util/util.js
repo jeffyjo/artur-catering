@@ -5,12 +5,34 @@ import { STORAGE_KEY } from "./const";
  * @param {object} json
  */
 export const setStorage = json => {
-  console.log(json);
-  localStorage.setItem(STORAGE_KEY, jsonToStr(json));
+  const storage = getStorage();
+  if (Array.isArray(storage)) {
+    const newStorage = storage.concat([json]);
+    localStorage.setItem(STORAGE_KEY, jsonToStr(newStorage));
+  } else {
+    if (storage !== null) {
+      const newStorage = [];
+      newStorage.push(storage);
+      newStorage.push(json);
+      localStorage.setItem(STORAGE_KEY, jsonToStr(newStorage));
+    } else {
+      localStorage.setItem(STORAGE_KEY, jsonToStr(json));
+    }
+  }
 };
 
 export const removeFromStorage = json => {
-  localStorage.removeItem(STORAGE_KEY, jsonToStr(json));
+  const storage = getStorage();
+  if (Array.isArray(storage)) {
+    storage.map((item, index) => {
+      if (item.plan.name === json.plan.name) {
+        delete storage[index];
+        localStorage.setItem(STORAGE_KEY, jsonToStr(json));
+      }
+    });
+  } else {
+    localStorage.clear();
+  }
 };
 
 /**
@@ -19,22 +41,22 @@ export const removeFromStorage = json => {
  */
 export const getStorage = () => strToJson(localStorage.getItem(STORAGE_KEY));
 
-export const findInStorage = name => {
-  const json = strToJson(localStorage.getItem(STORAGE_KEY));
-  console.log();
-  if (json === null) return false;
-
+export function findInStorage(name) {
+  const json = getStorage();
+  if (json === "undefined" || json === null) return false;
   if (Array.isArray(json)) {
-    json.map((item, index) => {
-      if (item.plan.name === name) return true;
-      else return false;
+    var res = json.map((item, index) => {
+      if (item.plan.name === name) {
+        return true;
+      } else return false;
     });
+    if (res.indexOf(true) > -1) return true;
+    else return false;
   } else {
-    console.log(json);
     if (json.plan.name === name) return true;
     else return false;
   }
-};
+}
 
 /**
  * Private method for converting string to json

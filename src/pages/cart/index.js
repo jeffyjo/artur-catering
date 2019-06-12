@@ -1,27 +1,30 @@
-import React, { Component } from 'react'
-import Layout from '../../components/Util/Layout'
+import React, { Component } from "react";
+import Layout from "../../components/Util/Layout";
 
-import CartForm from '../../components/Cart/CartForm/CartForm'
+import CartForm from "../../components/Cart/CartForm/CartForm";
+import Cart from "../../components/Cart/Cart";
+import { getStorage } from "../../components/Util/util";
 
 class Form extends Component {
-	constructor(props) {
-		super(props)
-	}
+  constructor(props) {
+    super(props);
+  }
 
-	render() {
-		return (
-			<Layout>
-				<section className="section">
-					<div className="container">
-						<div className="content">
+  render() {
+    return (
+      <Layout>
+        <section className="section">
+          <div className="container">
+            <div className="content">
               <h1>Your details</h1>
+              <Cart cart={getStorage()} />
               <CartForm />
-						</div>
-					</div>
-				</section>
-			</Layout>
-		)
-	}
+            </div>
+          </div>
+        </section>
+      </Layout>
+    );
+  }
 }
 
-export default Form
+export default Form;
