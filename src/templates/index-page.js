@@ -6,21 +6,33 @@ import Spot from '../components/Spot/Spot'
 import Layout from '../components/Util/Layout'
 
 export const IndexPageTemplate = ({
-	image,
-	title,
-	heading,
-	subheading,
-	mainpitch,
-	description,
-	intro,
-	main,
+  image,
+  title,
+  heading,
+  subheading,
+  mainpitch,
+  description,
+  intro,
+  main,
 }) => (
-		<div>
-			<Spot />		
-			<Spot className="o-spot--reverse" />		
-			<Spot />		
-		</div>
-)
+  <article>
+    <section className="hero">
+      <div className="hero-body">
+        <div className="container is-fluid">
+          <h1 className="title">
+            {title && title}
+          </h1>
+          <h2 className="subtitle">
+            {description && description}
+          </h2>
+        </div>
+      </div>
+    </section>
+    <Spot />
+    <Spot className="o-spot--reverse" />
+    <Spot />
+  </article>
+);
 
 IndexPageTemplate.propTypes = {
 	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -67,7 +79,7 @@ query IndexPageTemplate {
 	markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
 			frontmatter {
 				title
-				image 
+				image
 				heading
 				subheading
 				mainpitch {
