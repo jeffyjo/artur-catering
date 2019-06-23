@@ -28,9 +28,11 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <Spot />
-    <Spot className="o-spot--reverse" />
-    <Spot />
+    <div className="container is-fluid">
+      <Spot />
+      <Spot className="o-spot--reverse" />
+      <Spot />
+    </div>
   </article>
 );
 
