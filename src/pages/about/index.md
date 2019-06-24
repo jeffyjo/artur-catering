@@ -9,6 +9,13 @@ avatars:
         alt: Alt text
         src: >-
           https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/apple-touch-icon.png
+  - avatar:
+      description: Hi
+      header: Hello
+      image:
+        alt: Alt
+        src: >-
+          https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/artur_logo.png
 partners:
   - partner:
       image:
