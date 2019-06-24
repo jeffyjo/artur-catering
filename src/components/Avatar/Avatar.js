@@ -6,16 +6,13 @@ import './Avatar.scss'
 import Image from './../Image/Image'
 
 // TODO: Should be using dynamic content
-const Avatar = ({ image, imageTitle, header, decsription }) => {
+const Avatar = ({ image, header, description }) => {
     return (
-        <div className="o-avatar">
-            {console.log("NY" + JSON.stringify(image))}
-            {/* <Image src={image.src.childImageSharp.fixed.src} title={image.alt} /> */}
-            <Image src={image.src} title={image.alt} />
-            {/* <img className="o-avatar__image" src={src} title={imageTitle} /> */}
-            <h3 className="o-avatar__header">{header}</h3>
-            <p className="o-avatar__description">{decsription}</p>
-        </div>
+      <div className="o-avatar">
+        <Image className="o-avatar__image" src={image.src} title={image.alt} />
+        <h3 className="o-avatar__header">{header && header}</h3>
+        <p className="o-avatar__description">{description && description}</p>
+      </div>
     )
 }
 
