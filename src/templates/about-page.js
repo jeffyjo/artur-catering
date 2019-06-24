@@ -16,24 +16,22 @@ export const AboutPageTemplate = ({ title, content, contentComponent, avatars, p
 				<div className="columns">
 					<div className="column is-10 is-offset-1">
 						<h2 className="u-align--center u-align@desktop--left title is-size-3 has-text-weight-bold is-bold-light">
-								{title}
-						</h2>	
-						{/* {console.log(JSON.stringify(avatars))} */}
-						{/* Should be dynamic and looped */}
-						<div className="section u-grid u-grid--column u-grid--center u-grid@tablet--row u-grid@tablet--space-around">
-							{avatars.map((avatar, index)=> {
-								const {image, text,imageTitle ,decsription} = avatar.avatar;
-								return <Avatar image={image} imageTitle={text} header={imageTitle} decsription={decsription} key={index}/>
-							 } )}
-						</div>
+								{title && title}
+						</h2>
+						<section className="section u-grid u-grid--column u-grid--center u-grid-tablet--row u-grid-tablet--space-around">
+							{avatars.map(({ avatar }, index)=> {
+								const {image, header, description} = avatar;
+								return <Avatar image={image} header={header} description={description} key={index}/>
+              })}
+						</section>
 
-						<div className="section">
+						<section className="section">
 							<PageContent className="content" content={content} />
-						</div>
+						</section>
 
-						<div>
-							<Partners partners={partners} />
-						</div>
+						<section>
+							{/* <Partners partners={partners} /> */}
+						</section>
 
 					</div>
 				</div>
@@ -77,11 +75,11 @@ export const aboutPageQuery = graphql`
 		markdownRemark(id: { eq: $id }) {
 			html
 			frontmatter {
-				title 
+				title
 				avatars {
 					avatar {
 					  image {
-						src 
+						src
 						alt
 					  }
 					  header
@@ -91,13 +89,13 @@ export const aboutPageQuery = graphql`
 				  partners {
 					partner {
 					  image {
-						src 
+						src
 						alt
 					  }
 					  imageTitle
 					  partnerName
 					}
-				
+
 				}
 			}
 		}
