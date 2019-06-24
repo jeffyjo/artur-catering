@@ -8,6 +8,10 @@ import Avatar from '../components/Avatar/Avatar';
 import Partners from '../components/Partners/Partners'
 
 export const AboutPageTemplate = ({ title, content, contentComponent, avatars, partners }) => {
+  const strippedPartners = partners.map(({ partner }) => {
+    return partner
+  })
+
 	const PageContent = contentComponent || Content
 
 	return (
@@ -30,7 +34,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, avatars, p
 						</section>
 
 						<section>
-							{/* <Partners partners={partners} /> */}
+							<Partners partners={strippedPartners} />
 						</section>
 
 					</div>
@@ -95,7 +99,6 @@ export const aboutPageQuery = graphql`
 					  imageTitle
 					  partnerName
 					}
-
 				}
 			}
 		}
