@@ -19,7 +19,7 @@
     }
     
     /* device modifiers */
-    &\@tablet {
+    &-tablet {
         @include md {
             &--column {
                 flex-direction: column;
@@ -35,7 +35,7 @@
         }
     }
 
-    &\@desktop {
+    &\-desktop {
         @include lg {
             &--column {
                 flex-direction: column;
