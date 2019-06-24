@@ -5,20 +5,20 @@ import Partner from './Partner/Partner'
 
 import './Partners.scss'
 
-// TODO: Should be using dynamic content
 const Partners = ({ partners }) => {
     return (
         <div className="o-partners">
-           {partners.map((partner, index) => {
-        console.log(partner.partner + "___:partner")
-        const {image, imageTitle,partnerName} = partner.partner;
-        if(image.src === null) return "";
-        return <Partner className="o-partners__partner" image={image.src} imageTitle={imageTitle} partnerName={partnerName} key={index}/>
-        })}
+          {partners && partners.map(({ image, partnerName }, i) => (
+            <Partner
+              image={image}
+              partnerName={partnerName}
+              key={`${partnerName}${i}`}
+            />
+          ))}
         </div>
     )
 }
- 
+
 Partners.propTypes = {
     partners: PropTypes.any
 }
