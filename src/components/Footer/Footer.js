@@ -31,18 +31,17 @@ const Footer = class extends React.Component {
                         Plans
                       </Link>
                     </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
                     <li>
                       <Link className="navbar-item" to="/contact">
                         Contact
                       </Link>
                     </li>
                   </ul>
+                </section>
+              </div>
+              <div className="column is-4">
+                <section>
+                  {/* TODO: Place business info here */}
                 </section>
               </div>
               <div className="column is-4 social">
