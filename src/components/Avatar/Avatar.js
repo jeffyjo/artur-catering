@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import './Avatar.scss'
 import Image from './../Image/Image'
 
-// TODO: Should be using dynamic content
 const Avatar = ({ image, header, description }) => {
     return (
       <div className="o-avatar">
