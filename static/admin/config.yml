@@ -18,20 +18,6 @@ collections:
   #     - {label: "Description", name: "description", widget: "text"}
   #     - {label: "Body", name: "body", widget: "markdown"}
   #     - {label: "Tags", name: "tags", widget: "list"}
-  - name: "Dishes"
-    label: "Dishes"
-    folder: "src/pages/dish"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Price", name: "price", widget: "number" }
-      - {
-          label: "Type",
-          name: "type",
-          widget: "select",
-          options: ["NONE", "FORRET", "HOVEDRET", "DESSERT", "DRINKS"],
-        }
   - name: "pages"
     label: "Pages"
     files:
