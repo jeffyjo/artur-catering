@@ -32,14 +32,6 @@ collections:
               default: "index-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Hero,
-              name: hero,
-              widget: object,
-              fields: [
-                { label: Image, name: image, widget: image },
-                { label: Alt, name: alt, widget: string }
-              ]
-            }
           - { label: Description, name: description, widget: markdown }
           - {
               label: Blurbs,
