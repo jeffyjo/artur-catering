@@ -10,12 +10,7 @@ export const IndexPageTemplate = ({
   description,
   hero,
   blurbs
-}) => {
-  console.log('title', title)
-  console.log('description', description)
-  console.log('hero', hero)
-  console.log('blurbs', blurbs)
-  return (
+}) => (
   <article>
     <section className="hero">
       <div className="hero-body">
@@ -33,15 +28,15 @@ export const IndexPageTemplate = ({
       {blurbs && blurbs.map((blurb, i) => (
         <Spot
           key={`${blurb.image.publicURL}${i}`}
-          src={blurb.image.image.publicURL}
-          alt={blurb.image.image.alt}
+          src={blurb.image.image}
+          alt={blurb.image.alt}
           contentComponent={blurb.description}
           className={i % 2 === 0 ? '' : 'o-spot--reverse' }
         />
       ))}
     </div>
   </article>
-)};
+);
 
 IndexPageTemplate.propTypes = {
 	hero: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -82,18 +77,14 @@ query IndexPageTemplate {
         title,
         description
         hero {
-          image {
-            publicURL
-          }
+          image
           alt
         },
         blurbs {
           description,
           image {
             alt,
-            image {
-              publicURL
-            }
+            image
           }
         }
       }
