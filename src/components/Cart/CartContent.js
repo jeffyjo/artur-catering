@@ -3,12 +3,14 @@ import React, { Component } from "react";
 import { getStorage } from "../Util/util";
 
 class CartContent extends Component {
-  super(props) {
-    this.super(props);
+
+  constructor(props) {
+    super(props)
     this.state = {
       cart: ""
     };
   }
+
   componentWillMount() {
     this.setState({ cart: "" });
   }
@@ -19,9 +21,7 @@ class CartContent extends Component {
 
   render() {
     const { cart } = this.state;
-    // const cart = getStorage();
     if (cart === "") return <div />;
-    // return <div />;
     if (Array.isArray(this.state.cart)) {
       return (
         <div>
