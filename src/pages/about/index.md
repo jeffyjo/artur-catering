@@ -5,18 +5,19 @@ avatars:
   - avatar:
       description: test
       header: Header
-      image: https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/artur_logo.png
+      image: >-
+        https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/artur_logo.png
   - avatar:
       description: Hi
       header: Hello
-      image: https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/artur_logo.png
+      image: >-
+        https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/artur_logo.png
 partners:
   - partner:
+      image: >-
+        https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6299-01.jpeg
       partnerName: Pentia A/S
-      image: https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6299-01.jpeg
 ---
-Testing
-
 ### Shade-grown coffee
 
 Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
