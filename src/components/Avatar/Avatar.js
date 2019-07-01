@@ -8,8 +8,8 @@ import Image from './../Image/Image'
 const Avatar = ({ image, header, description }) => {
     return (
       <div className="o-avatar">
-        <Image className="o-avatar__image" src={image.src} title={image.alt} />
-        <h3 className="o-avatar__header">{header && header}</h3>
+        <Image className="o-avatar__image" src={image.src} alt={image.alt} />
+        <h2 className="o-avatar__header is-size-4">{header && header}</h2>
         <p className="o-avatar__description">{description && description}</p>
       </div>
     )
