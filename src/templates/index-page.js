@@ -10,7 +10,12 @@ export const IndexPageTemplate = ({
   description,
   hero,
   blurbs
-}) => (
+}) => {
+  console.log('title', title)
+  console.log('description', description)
+  console.log('hero', hero)
+  console.log('blurbs', blurbs)
+  return (
   <article>
     <section className="hero">
       <div className="hero-body">
@@ -36,7 +41,7 @@ export const IndexPageTemplate = ({
       ))}
     </div>
   </article>
-);
+)};
 
 IndexPageTemplate.propTypes = {
 	hero: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

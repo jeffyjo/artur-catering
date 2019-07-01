@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Great coffee with a conscience
-Hero:
+hero:
   alt: Table of food
   image: >-
     https://raw.githubusercontent.com/jeffyjo/artur-catering/fix/landing-page/static/img/dsc_6263-01.jpeg
@@ -17,4 +17,3 @@ blurps:
       image: >-
         https://raw.githubusercontent.com/jeffyjo/artur-catering/fix/landing-page/static/img/dsc_6268-01.jpeg
 ---
-

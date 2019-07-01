@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: fix/landing-page
 
 media_folder: static/img
 public_folder: /img
@@ -32,8 +32,8 @@ collections:
               default: "index-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: hero,
-              name: Hero,
+          - { label: Hero,
+              name: hero,
               widget: object,
               fields: [
                 { label: Image, name: image, widget: image },
