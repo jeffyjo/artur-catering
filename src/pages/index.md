@@ -12,5 +12,15 @@ blurbs:
       alt: different food on table
       image: >-
         https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6271-01.jpeg
+  - description: >-
+      Donec consectetur, risus ac rutrum porta, massa leo lobortis urna, sed
+      viverra sem libero id purus. Praesent nisl libero, cursus quis feugiat
+      quis, tempus ac lacus. Phasellus et efficitur felis, porta ultrices nisi.
+      Sed feugiat aliquam ultricies. Sed vestibulum ut sem id mollis. Phasellus
+      luctus accumsan sodales.
+    image:
+      alt: Potatoes with cream
+      image: >-
+        https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6231-01.jpeg
 ---
 
