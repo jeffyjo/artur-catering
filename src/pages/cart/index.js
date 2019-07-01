@@ -3,7 +3,7 @@ import Layout from "../../components/Util/Layout";
 
 import CartForm from "../../components/Cart/CartForm/CartForm";
 import Cart from "../../components/Cart/Cart";
-import { getStorage } from "../../components/Util/util";
+// import { getStorage } from "../../components/Util/util";
 
 class Form extends Component {
   render() {

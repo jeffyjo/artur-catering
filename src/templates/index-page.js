@@ -6,14 +6,9 @@ import Spot from '../components/Spot/Spot'
 import Layout from '../components/Util/Layout'
 
 export const IndexPageTemplate = ({
-  image,
   title,
-  heading,
-  subheading,
-  mainpitch,
   description,
-  intro,
-  main,
+  blurbs
 }) => (
   <article>
     <section className="hero">
@@ -29,38 +24,35 @@ export const IndexPageTemplate = ({
       </div>
     </section>
     <div className="container is-fluid">
-      <Spot />
-      <Spot className="o-spot--reverse" />
-      <Spot />
+      {blurbs && blurbs.map((blurb, i) => (
+        <Spot
+          key={`${blurb.image.publicURL}${i}`}
+          src={blurb.image.image}
+          alt={blurb.image.alt}
+          contentComponent={blurb.description}
+          className={i % 2 === 0 ? '' : 'o-spot--reverse' }
+        />
+      ))}
     </div>
   </article>
 );
 
 IndexPageTemplate.propTypes = {
-	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+	hero: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	title: PropTypes.string,
-	heading: PropTypes.string,
-	subheading: PropTypes.string,
-	mainpitch: PropTypes.object,
 	description: PropTypes.string,
-	intro: PropTypes.shape({
-		blurbs: PropTypes.array,
-	}),
+  blurbs: PropTypes.array,
 }
 
 const IndexPage = ({ data }) => {
-	const { frontmatter } = data.markdownRemark
+  const { title, description, blurbs } = data.markdownRemark.frontmatter
 
 	return (
 		<Layout>
 			<IndexPageTemplate
-				image={frontmatter.image}
-				title={frontmatter.title}
-				heading={frontmatter.heading}
-				subheading={frontmatter.subheading}
-				mainpitch={frontmatter.mainpitch}
-				description={frontmatter.description}
-				intro={frontmatter.intro}
+        title={title}
+        description={description}
+        blurbs={blurbs}
 			/>
 		</Layout>
 	)
@@ -80,24 +72,16 @@ export const pageQuery = graphql`
 query IndexPageTemplate {
 	markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
 			frontmatter {
-				title
-				image
-				heading
-				subheading
-				mainpitch {
-					title
-					description
-				}
-				description
-				intro {
-					blurbs {
-						image
-						text
-					}
-					heading
-					description
-				}
-			}
-		}
+        title,
+        description,
+        blurbs {
+          description,
+          image {
+            alt,
+            image
+          }
+        }
+      }
+    }
 	}
 `
