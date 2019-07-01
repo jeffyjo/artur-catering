@@ -19,9 +19,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent, avatars, p
 			<div className="container">
 				<div className="columns">
 					<div className="column is-10 is-offset-1">
-						<h2 className="u-align--center u-align@desktop--left title is-size-3 has-text-weight-bold is-bold-light">
+						<h1 className="u-align--center u-align@desktop--left title is-size-3 has-text-weight-bold is-bold-light">
 								{title && title}
-						</h2>
+						</h1>
 						<section className="section u-grid u-grid--column u-grid--center u-grid-tablet--row u-grid-tablet--space-around">
 							{avatars.map(({ avatar }, index)=> {
 								const {image, header, description} = avatar;
@@ -33,7 +33,10 @@ export const AboutPageTemplate = ({ title, content, contentComponent, avatars, p
 							<PageContent className="content" content={content} />
 						</section>
 
-						<section>
+            <hr />
+
+						<section className="section">
+              <h2 className="title is-size-3">Our Partners</h2>
 							<Partners partners={strippedPartners} />
 						</section>
 

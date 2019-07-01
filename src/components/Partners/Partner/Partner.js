@@ -9,8 +9,8 @@ import './Partner.scss'
 const Partner = ({ image, partnerName, className }) => {
   return (
     <div className={`m-partner ${className}`}>
-        <Image className="m-partner__image" src={image.src} title={image.alt} />
-        <h4 className="m-partner__title">{partnerName && partnerName}</h4>
+        <Image className="m-partner__image a-image--rounded" src={image.src} alt={image.alt} />
+        <h3 className="m-partner__title">{partnerName && partnerName}</h3>
     </div>
   )
 }
