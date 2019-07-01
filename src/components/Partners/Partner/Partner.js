@@ -9,14 +9,14 @@ import './Partner.scss'
 const Partner = ({ image, partnerName, className }) => {
   return (
     <div className={`m-partner ${className}`}>
-        <Image className="m-partner__image a-image--rounded" src={image.src} alt={image.alt} />
+        <Image className="m-partner__image a-image--rounded" src={image} alt={partnerName} />
         <h3 className="m-partner__title">{partnerName && partnerName}</h3>
     </div>
   )
 }
 
 Partner.propTypes = {
-    image: PropTypes.object,
+    image: PropTypes.string,
     partnerName: PropTypes.string,
     className: PropTypes.string
 }
