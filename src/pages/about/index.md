@@ -8,7 +8,7 @@ avatars:
       image:
         alt: Alt text
         src: >-
-          https://raw.githubusercontent.com/jeffyjo/artur-catering/fix/landing-page/static/img/artur_logo.png
+          https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/artur_logo.png
   - avatar:
       description: Hi
       header: Hello
@@ -21,7 +21,7 @@ partners:
       image:
         alt: Alt text
         src: >-
-          https://raw.githubusercontent.com/jeffyjo/artur-catering/fix/landing-page/static/img/dsc_6231-01.jpeg
+          https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6299-01.jpeg
       imageTitle: avatar
       partnerName: Pentia A/S
 ---
