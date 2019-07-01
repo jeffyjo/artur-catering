@@ -8,7 +8,7 @@ import Image from './../Image/Image'
 const Avatar = ({ image, header, description }) => {
     return (
       <div className="o-avatar">
-        <Image className="o-avatar__image" src={image.src} alt={image.alt} />
+        <Image className="o-avatar__image" src={image} alt={header} />
         <h2 className="o-avatar__header is-size-4">{header && header}</h2>
         <p className="o-avatar__description">{description && description}</p>
       </div>
@@ -16,8 +16,7 @@ const Avatar = ({ image, header, description }) => {
 }
 
 Avatar.propTypes = {
-    image: PropTypes.object,
-    imageTitle: PropTypes.string,
+    image: PropTypes.string,
     header: PropTypes.string,
     decsription: PropTypes.string
 }

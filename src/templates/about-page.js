@@ -85,23 +85,16 @@ export const aboutPageQuery = graphql`
 				title
 				avatars {
 					avatar {
-					  image {
-						src
-						alt
-					  }
-					  header
+            image,
+					  header,
 					  description
 					}
-				  }
-				  partners {
-					partner {
-					  image {
-						src
-						alt
-					  }
-					  imageTitle
-					  partnerName
-					}
+        },
+        partners {
+          partner {
+            image,
+            partnerName
+          }
 				}
 			}
 		}

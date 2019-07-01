@@ -14,7 +14,7 @@ const AboutPagePreview = ({ entry }) => {
       title={entry.getIn(['data', 'title'])}
       avatars={avatars}
       partners={partners}
-      content={entry.getIn(['html'])}
+      content={entry.getIn(['data', 'body'])}
     />
   )
 }
