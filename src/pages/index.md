@@ -11,5 +11,6 @@ blurbs:
     image:
       alt: different food on table
       image: >-
-        https://raw.githubusercontent.com/jeffyjo/artur-catering/fix/landing-page/static/img/dsc_6268-01.jpeg
+        https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6271-01.jpeg
 ---
+
