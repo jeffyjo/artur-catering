@@ -1,8 +1,7 @@
 ---
 templateKey: index-page
 title: Great coffee with a conscience
-image: >-
-  https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/blog-index.jpg
+image: /img/dsc_6268-01.jpeg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
@@ -19,8 +18,7 @@ description: >-
   anyone.
 intro:
   blurbs:
-    - image: >-
-        https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/apple-touch-icon.png
+    - image: /img/dsc_6301-01.jpeg
       text: >
         We sell green and roasted coffee beans that are sourced directly from
         independent farmers and farm cooperatives. We’re proud to offer a
@@ -41,16 +39,13 @@ main:
     journey. We personally visit each farm to make sure the conditions are
     optimal for the plants, farmers and the local environment.
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: >-
-      https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/blog-index.jpg
+    alt: A close-up of a paper potatoes
+    image: /img/dsc_6326-01.jpeg
   image2:
-    alt: A green cup of a coffee on a wooden table
-    image: >-
-      https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/chemex.jpg
+    alt: Round table with food
+    image: /img/dsc_6273-01.jpeg
   image3:
-    alt: Coffee beans
-    image: >-
-      https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/jumbotron.jpg
+    alt: Business card and food
+    image: /img/dsc_6322-01.jpeg
 ---
 
