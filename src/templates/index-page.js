@@ -8,7 +8,6 @@ import Layout from '../components/Util/Layout'
 export const IndexPageTemplate = ({
   title,
   description,
-  hero,
   blurbs
 }) => (
   <article>
@@ -46,14 +45,13 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
-  const { title, description, hero, blurbs } = data.markdownRemark.frontmatter
+  const { title, description, blurbs } = data.markdownRemark.frontmatter
 
 	return (
 		<Layout>
 			<IndexPageTemplate
         title={title}
         description={description}
-        hero={hero}
         blurbs={blurbs}
 			/>
 		</Layout>
@@ -75,11 +73,7 @@ query IndexPageTemplate {
 	markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
 			frontmatter {
         title,
-        description
-        hero {
-          image
-          alt
-        },
+        description,
         blurbs {
           description,
           image {
