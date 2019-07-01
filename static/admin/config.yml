@@ -42,8 +42,8 @@ collections:
             }
           - { label: Description, name: description, widget: markdown }
           - {
-              label: Blurps,
-              name: blurps,
+              label: Blurbs,
+              name: blurbs,
               widget: list,
               fields: [
                   { label: Description, name: description, widget: markdown },

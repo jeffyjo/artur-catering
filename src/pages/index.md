@@ -10,7 +10,7 @@ description: >-
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
-blurps:
+blurbs:
   - description: A Description of some delicious food
     image:
       alt: different food on table
