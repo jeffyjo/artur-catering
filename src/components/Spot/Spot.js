@@ -5,16 +5,16 @@ import Image from "../Image/Image";
 
 import "./Spot.scss";
 
-const Spot = ({ src, title, contentComponent, className }) => {
+const Spot = ({ src, alt, contentComponent, className }) => {
   const PageContent = contentComponent;
 
   return (
-    <section className={`o-spot ${className ? className : ""}`}>
+    <section className={`o-spot section ${className ? className : ""}`}>
       {/* <PageContent /> */}
       <div className="o-spot__content">{PageContent}</div>
 
       <div className="o-spot__image-wrapper">
-        <Image src={src} title={title} />
+        <Image src={src} alt={alt} className="a-image--rounded" />
       </div>
     </section>
   );
