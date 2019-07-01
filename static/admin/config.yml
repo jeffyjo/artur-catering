@@ -58,13 +58,10 @@ collections:
                 name: "avatar"
                 widget: "object"
                 fields:
+                  - { label: "Header", name: "header", widget: "string" }
                   - label: "Image"
                     name: "image"
-                    widget: "object"
-                    fields:
-                      - { label: "ImageSrc", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
-                  - { label: "Header", name: "header", widget: "string" }
+                    widget: "image"
                   - {
                       label: "Description",
                       name: "description",
@@ -79,17 +76,7 @@ collections:
                 name: "partner"
                 widget: "object"
                 fields:
-                  - label: "Image"
-                    name: "image"
-                    widget: "object"
-                    fields:
-                      - { label: "ImageSrc", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
-                  - {
-                      label: "ImageTitle",
-                      name: "imageTitle",
-                      widget: "string",
-                    }
+                  - { label: "Image", name: "image", widget: "image" }
                   - {
                       label: "PartnerName",
                       name: "partnerName",

@@ -5,25 +5,15 @@ avatars:
   - avatar:
       description: test
       header: Header
-      image:
-        alt: Alt text
-        src: >-
-          https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/artur_logo.png
+      image: https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/artur_logo.png
   - avatar:
       description: Hi
       header: Hello
-      image:
-        alt: Alt
-        src: >-
-          https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/artur_logo.png
+      image: https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/artur_logo.png
 partners:
   - partner:
-      image:
-        alt: Alt text
-        src: >-
-          https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6299-01.jpeg
-      imageTitle: avatar
       partnerName: Pentia A/S
+      image: https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6299-01.jpeg
 ---
 Testing
 
