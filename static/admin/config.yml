@@ -96,7 +96,7 @@ collections:
                 name: Plan
                 widget: object
                 fields: 
-                - {label: Name, name: name widget: string}
+                - {label: Name, name: name, widget: string}
                 - {label: Price, name: price, widget: number}
                 - label: Dishes
                   name: dishes
