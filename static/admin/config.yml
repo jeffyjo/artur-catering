@@ -25,7 +25,8 @@ collections:
               label: Blurbs,
               name: blurbs,
               widget: list,
-              fields: [
+              fields:
+                [
                   { label: Description, name: description, widget: markdown },
                   {
                     label: Image,
@@ -35,9 +36,9 @@ collections:
                       [
                         { label: Image, name: image, widget: image },
                         { label: Alt, name: alt, widget: string },
-                      ]
-                  }
-              ]
+                      ],
+                  },
+                ],
             }
       - file: "src/pages/about/index.md"
         label: "About"
@@ -82,6 +83,31 @@ collections:
                       name: "partnerName",
                       widget: "string",
                     }
+      - file: "src/pages/plans/index.md"
+        label: Plans
+        name: Plans
+        fields:
+          - { label: Title, name: title, widget: string }
+          -  label: Plans
+             name: plans
+             widget: list
+             fields: 
+              - label: Plan
+                name: Plan
+                widget: object
+                fields: 
+                - {label: Name, name: name widget: string}
+                - {label: Price, name: price, widget: number}
+                - label: Dishes
+                  name: dishes
+                  widget: list
+                  fields: 
+                  - {label: Name, name: name, widget: string}
+                  - {label: Description, name: description, widget: string}
+                  - {label: Allergens, name: allergens, widget: string}
+                  - {label: Image, name: image, widget: Image}}
+            
+            
       # - file: "src/pages/plans/index.md"
       #   label
       # - {label: "Avatars", name: "avatars", widget: object, fields: {label: "Avatar", name: "avatar", widget: "list", fields: [{label: "Image", name: "image", widget: "object", fields: [{label: "Image Src", name: "src", widget: image}, {label: "Alternative Text", name: "alt", widget: string}]}, {label: "Image Title", name: "imageTitle", widget: "string"}, {label: "Header", name: "header", widget: "string"}, {label: "Description", name: "description", widget: "markdown"}]}}

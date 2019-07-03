@@ -3,12 +3,13 @@ import React, { Component } from "react";
 import { getStorage } from "../Util/util";
 
 class CartContent extends Component {
-
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      cart: ""
+      cart: "",
     };
+
+    this.handleItemChange = this.handleItemChange.bind(this);
   }
 
   componentWillMount() {
@@ -19,6 +20,13 @@ class CartContent extends Component {
     this.setState({ cart: getStorage() });
   }
 
+  handleItemChange(e) {
+    const val = e.target.value;
+
+    if (val > 0) {
+    }
+  }
+
   render() {
     const { cart } = this.state;
     if (cart === "") return <div />;
@@ -27,10 +35,10 @@ class CartContent extends Component {
         <div>
           {cart.map((item, index) => (
             <div key={index}>
-              <h1>{item.plan.name}</h1>
-              <h2>
+              <h3>{item.plan.name}</h3>
+              <p>
                 {item.plan.price} DKK x {item.amount}
-              </h2>
+              </p>
             </div>
           ))}
         </div>
@@ -38,10 +46,10 @@ class CartContent extends Component {
     } else {
       return (
         <div>
-          <h1>{cart.plan.name}</h1>
-          <h2>
+          <h3>{cart.plan.name}</h3>
+          <p>
             {cart.plan.price} DKK x {cart.amount}
-          </h2>
+          </p>
         </div>
       );
     }

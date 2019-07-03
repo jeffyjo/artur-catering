@@ -7,10 +7,19 @@ import "./Plan.scss";
 import { setStorage, findInStorage, removeFromStorage } from "../Util/util";
 
 class Plan extends Component {
-  super(props) {
-    this.super(props);
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: false,
+    };
 
     this.addToCart = this.addToCart.bind(this);
+    this.handleAddToCart = this.handleAddToCart.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({ active: findInStorage(this.props.name) });
+    console.log(this.state);
   }
 
   addToCart(plan) {
@@ -22,6 +31,12 @@ class Plan extends Component {
     } else {
       setStorage(cartItem);
     }
+  }
+
+  handleAddToCart() {
+    this.addToCart(this.props);
+    console.log("state: " + this.state);
+    this.setState({ active: findInStorage(this.props.name) });
   }
 
   render() {
@@ -45,9 +60,9 @@ class Plan extends Component {
           ))}
         </ul>
         <h3>{price} DKK</h3>
-        {/* <button onClick={() => this.addToCart(this.props)}>
-          {findInStorage(name) ? "Remove From Cart" : "Add to Cart"}
-        </button> */}
+        <button onClick={this.handleAddToCart}>
+          {this.state.active ? "Remove From Cart" : "Add to Cart"}
+        </button>
       </div>
     );
   }
@@ -56,7 +71,7 @@ class Plan extends Component {
 Plan.propTypes = {
   name: PropTypes.string,
   dishes: PropTypes.array,
-  price: PropTypes.number
+  price: PropTypes.number,
 };
 
 export default Plan;

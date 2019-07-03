@@ -7,22 +7,30 @@ const Cart = class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      total: 0
+      total: 0,
     };
 
     // this.printDocument = this.printDocument.bind(this);
+    this.addTotal = this.addTotal.bind(this);
   }
+
+  addTotal(val) {
+    this.setState({ total: val });
+  }
+
   render() {
     const { total, cart } = this.props;
     return (
       <div>
         {console.log(cart)}
         <div id="cartdownload">
-          <h1>Hello Cart</h1>
-          <CartContent />
+          <CartContent addTotal={this.addTotal} />
 
           <div>
-            <h1>Total DKK: {total} </h1>
+            <h3>
+              Total <br />
+              {total} DKK
+            </h3>
           </div>
 
           {/* {JSON.stringify(cart)} */}
@@ -37,7 +45,7 @@ const Cart = class extends React.Component {
 
 Cart.propTypes = {
   cart: PropTypes.arrayOf(PropTypes.object),
-  total: PropTypes.number
+  total: PropTypes.number,
 };
 
 export default Cart;
