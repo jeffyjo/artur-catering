@@ -10,7 +10,7 @@ class Plan extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false,
+      active: false
     };
 
     this.addToCart = this.addToCart.bind(this);
@@ -71,7 +71,7 @@ class Plan extends Component {
 Plan.propTypes = {
   name: PropTypes.string,
   dishes: PropTypes.array,
-  price: PropTypes.number,
+  price: PropTypes.number
 };
 
 export default Plan;
