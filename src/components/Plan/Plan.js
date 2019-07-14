@@ -25,7 +25,7 @@ class Plan extends Component {
   addToCart(plan) {
     const cartItem = { amount: 1, plan: plan };
     // console.log(findInStorage(plan.name));
-    var res = findInStorage(plan.name);
+    let res = findInStorage(plan.name);
     if (res) {
       removeFromStorage(cartItem);
     } else {
@@ -60,7 +60,7 @@ class Plan extends Component {
           ))}
         </ul>
         <h3>{price} DKK</h3>
-        <button onClick={this.handleAddToCart}>
+        <button className='o-plan__button button' onClick={this.handleAddToCart}>
           {this.state.active ? "Remove From Cart" : "Add to Cart"}
         </button>
       </div>
