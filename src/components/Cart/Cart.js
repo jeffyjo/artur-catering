@@ -21,11 +21,10 @@ const Cart = class extends React.Component {
   render() {
     const { total, cart } = this.props;
     return (
-      <div>
+      <section>
         {console.log(cart)}
         <div id="cartdownload">
           <CartContent addTotal={this.addTotal} />
-
           <div>
             <h3>
               Total <br />
@@ -36,9 +35,9 @@ const Cart = class extends React.Component {
           {/* {JSON.stringify(cart)} */}
         </div>
         <div>
-          <button>Print</button>
+          <button className='button'>Print</button>
         </div>
-      </div>
+      </section>
     );
   }
 };
