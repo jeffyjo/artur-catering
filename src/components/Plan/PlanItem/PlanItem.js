@@ -26,7 +26,7 @@ PlanItem.propTypes = {
   alt: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
-  allergens: PropTypes.array
+  allergens: PropTypes.string
 };
 
 export default PlanItem;

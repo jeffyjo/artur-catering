@@ -9,11 +9,12 @@ const PlanContent = ({ header, description, allergens, className }) => (
     <h3 className="m-plan-content__heading is-size-4">{header}</h3>
     <p className="m-plan-content__description">{description}</p>
     <ul className="m-plan-content__list">
-      {allergens.map((allergen, index) => (
+      <li className="m-plan-content__list-item">{allergens}</li>
+      {/* {allergens.map((allergen, index) => (
         <li className="m-plan-content__list-item" key={index}>
           {allergen}
         </li>
-      ))}
+      ))} */}
     </ul>
   </div>
 );
@@ -21,7 +22,7 @@ const PlanContent = ({ header, description, allergens, className }) => (
 PlanContent.propTypes = {
   header: PropTypes.string,
   description: PropTypes.string,
-  allergens: PropTypes.array,
+  allergens: PropTypes.string,
   className: PropTypes.string
 };
 

@@ -2,9 +2,13 @@
 @import '../../styles/01-tools/mixins';
 
 .o-plan {
-    margin-bottom: 4em;
+	margin-bottom: 4em;
 
-    @include md {
-        margin-bottom: 8em;
-    }
+	@include md {
+		margin-bottom: 8em;
+	}
+}
+
+.o-plan__button {
+	margin-top: 2rem;
 }
