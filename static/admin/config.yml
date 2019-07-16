@@ -84,6 +84,7 @@ collections:
                       widget: "string",
                     }
       - file: "src/pages/plans/index.md"
+        delete: false
         label: Plans
         name: Plans
         fields:
