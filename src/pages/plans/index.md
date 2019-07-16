@@ -18,6 +18,38 @@ plans:
             src: >-
               https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6283-01.jpeg
           name: Fried Tuna Filet
+        - description: Fennel salad and lemon dressing
+          image:
+            alt: Dill Marinated Salmon
+            src: >-
+              https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6245-01.jpeg
+          name: Dill Marinated Salmon
+        - description: >-
+            Smoked cheese, blue cheese and vesterhavn cheese Crispy radish, dark
+            bread apricot chutney 
+          image:
+            alt: 'Cheese board '
+            src: >-
+              https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6286-01.jpeg
+          name: 'Cheese board '
+        - description: Citrus butter and fresh herbs
+          image:
+            alt: Place rolls
+            src: >-
+              https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6273-01.jpeg
+          name: Place rolls
+        - description: Wild mushrooms sauce
+          image:
+            alt: Braised Beef Filet
+            src: >-
+              https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6271-01.jpeg
+          name: Braised Beef Filet
+        - description: Rosemary Roasted Idaho potatoes
+          image:
+            alt: Rosemary Roasted Idaho potatoes
+            src: >-
+              https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6254-01.jpeg
+          name: Rosemary Roasted Idaho potatoes
       name: Buffet Menu
       price: 250
 ---
