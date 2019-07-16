@@ -20,23 +20,32 @@ const Cart = class extends React.Component {
 
   render() {
     const { total, cart } = this.props;
+    console.log('cart', cart)
+    console.log('total', total)
+
     return (
       <section>
-        {console.log(cart)}
-        <div id="cartdownload">
-          <CartContent addTotal={this.addTotal} />
+        {total && cart &&
           <div>
-            <h3>
-              Total <br />
-              {total} DKK
-            </h3>
-          </div>
+            <div id="cartdownload">
+              <CartContent addTotal={this.addTotal} />
+              <div>
+                <h3>
+                  Total <br />
+                  {total} DKK
+                </h3>
+              </div>
 
-          {/* {JSON.stringify(cart)} */}
-        </div>
-        <div>
-          <button className='button'>Print</button>
-        </div>
+              {/* {JSON.stringify(cart)} */}
+            </div>
+            <div>
+              <button className='button'>Print</button>
+            </div>
+          </div>
+        }
+        {!total && !cart &&
+          <p>The cart is empty</p>
+        }
       </section>
     );
   }
