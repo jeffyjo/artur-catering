@@ -104,7 +104,7 @@ collections:
                   fields: 
                   - {label: Name, name: name, widget: string}
                   - {label: Description, name: description, widget: string}
-                  - {label: Allergens, name: allergens, widget: string}
+                  - {label: Allergens, name: allergens, widget: string, required: false}
                   - {label: Image, name: image, widget: Image}}
             
             
