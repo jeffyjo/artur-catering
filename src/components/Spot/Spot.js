@@ -14,7 +14,9 @@ const Spot = ({ src, alt, contentComponent, className }) => {
       <div className="o-spot__content">{PageContent}</div>
 
       <div className="o-spot__image-wrapper">
-        <Image src={src} alt={alt} className="a-image--rounded" />
+        <figure>
+          <Image src={src} alt={alt} className="a-image--rounded" />
+        </figure>
       </div>
     </section>
   );
