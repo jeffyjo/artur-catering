@@ -31,7 +31,7 @@
     padding: 2em;
     display: flex;
     align-items: center;
-    flex: 1 1 100%;
+    // flex: 1 1 100%;
 
     @include lg {
         flex: 1 1 50%;
@@ -41,7 +41,7 @@
 .o-spot__image-wrapper {
     padding: 2em;
     display: flex;
-    flex: 1 1 100%;
+    // flex: 1 1 100%;
     justify-content: center;
     
     @include lg {
