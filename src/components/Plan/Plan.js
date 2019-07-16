@@ -52,7 +52,7 @@ class Plan extends Component {
             <PlanItem
               src={dish.image.src}
               alt={dish.image.alt}
-              header={dish.name}
+              name={dish.name}
               description={dish.description}
               allergens={dish.allergens}
               key={index}
