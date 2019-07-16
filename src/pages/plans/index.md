@@ -50,6 +50,24 @@ plans:
             src: >-
               https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6254-01.jpeg
           name: Rosemary Roasted Idaho potatoes
+        - description: Honning roasted root vegetables
+          image:
+            alt: Honning roasted root vegetables
+            src: >-
+              https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6277-01.jpeg
+          name: Honning roasted root vegetables
+        - description: White chocolate cheese cake with raspberries
+          image:
+            alt: White chocolate cheese cake with raspberries
+            src: >-
+              https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6233-01.jpeg
+          name: White chocolate cheese cake with raspberries
+        - description: Chocolate cake
+          image:
+            alt: Chocolate cake
+            src: >-
+              https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6302-01.jpeg
+          name: Chocolate cake
       name: Buffet Menu
       price: 250
 ---
