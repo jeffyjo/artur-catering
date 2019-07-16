@@ -4,20 +4,21 @@ title: Hello plans
 plans:
   - Plan:
       dishes:
-        - allergens: Cake
-          description: Awesome dish
+        - allergens: ''
+          description: 'Home made croutons, parmesan flakes and dressing'
           image:
-            alt: Alt
+            alt: Caesar salad
             src: >-
               https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6231-01.jpeg
-          name: Risotto
-        - allergens: he
-          description: Super chicken
+          name: Caesar salad
+        - allergens: ''
+          description: Balsamic tomato salad and water cress
           image:
-            alt: Hej
+            alt: Fried Tuna Filet
             src: >-
               https://raw.githubusercontent.com/jeffyjo/artur-catering/master/static/img/dsc_6283-01.jpeg
-          name: Chicken
-      name: Summer Plan
-      price: 200
+          name: Fried Tuna Filet
+      name: Buffet Menu
+      price: 250
 ---
+
