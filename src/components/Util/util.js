@@ -36,6 +36,34 @@ export const removeFromStorage = json => {
   }
 };
 
+export const updateStorage = (name, amount) => {
+  const storage = getStorage();
+  if (Array.isArray(storage)) {
+  } else {
+    if (findInStorage(name)) {
+      storage.amount = amount;
+      localStorage.setItem(STORAGE_KEY, jsonToStr(storage));
+    }
+  }
+};
+
+export function removeFromCartByName(name) {
+  const storage = getStorage();
+  if (Array.isArray(storage)) {
+    storage.map(item => {
+      if (item.plan.name === name) {
+        localStorage.removeItem(item);
+      }
+    });
+  } else {
+    console.log(storage);
+    if (storage.plan.name === name) {
+      localStorage.removeItem(STORAGE_KEY, storage);
+    }
+    console.log(getStorage());
+    return;
+  }
+}
 /**
  * Get data from sessionStorage
  * @returns {json} cartItems

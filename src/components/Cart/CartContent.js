@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 
-import { getStorage } from "../Util/util";
+import { getStorage, updateStorage, removeFromCartByName } from "../Util/util";
 
 class CartContent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cart: "",
+      cart: ""
     };
 
     this.handleItemChange = this.handleItemChange.bind(this);
+    this.removeItem = this.removeItem.bind(this);
   }
 
   componentWillMount() {
@@ -22,9 +23,19 @@ class CartContent extends Component {
 
   handleItemChange(e) {
     const val = e.target.value;
+    if (val == undefined || val < e.target.min || val > e.target.max) return;
+    const { cart } = this.state;
+    const newCart = (cart.amount = val);
+    const name = e.target.id;
+    //update local storage
+    this.setState({ state: newCart });
+    updateStorage(name, val);
 
-    if (val > 0) {
-    }
+    this.props.updateTotal();
+  }
+  removeItem(name) {
+    removeFromCartByName(name);
+    this.props.updateTotal();
   }
 
   render() {
@@ -48,8 +59,20 @@ class CartContent extends Component {
         <div>
           <h3>{cart.plan.name}</h3>
           <p>
-            {cart.plan.price} DKK x {cart.amount}
+            {console.log(cart.amount)}
+            {cart.plan.price} DKK x{" "}
+            <input
+              type="number"
+              id={cart.plan.name}
+              value={parseInt(cart.amount)}
+              min={1}
+              max={300}
+              onChange={this.handleItemChange}
+            />
           </p>
+          {/* <button type="button" onClick={this.removeItem(cart.plan.name)}>
+            &times
+          </button> */}
         </div>
       );
     }
