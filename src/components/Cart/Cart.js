@@ -20,7 +20,10 @@ const Cart = class extends React.Component {
 
   componentDidMount() {
     const cart = getStorage();
-    this.setState({ cart: cart });
+    this.setState(s => {
+      return { cart: cart };
+    });
+    this.getTotal();
   }
 
   addTotal(val) {
@@ -28,25 +31,26 @@ const Cart = class extends React.Component {
   }
 
   getTotal() {
-    const preCart = this.state.cart;
-    if (preCart == undefined) return;
-    const cart = JSON.parse(preCart);
+    const cart = getStorage();
     if (Array.isArray(cart)) {
       cart.forEach(element => {
         const amount = element["amount"];
         console.log(amount);
       });
     } else {
-      const amount = cart["amount"];
-      const price = cart["plan"].price;
+      // const carte = JSON.parse(cart);
+      const amount = cart.amount;
+      if (!cart.plan) {
+        console.log(cart);
+        return;
+      }
+      if (!cart.plan.price || !cart.plan) return;
+      const price = cart.plan.price;
       const total = amount * price;
       this.setState(state => {
         return { total: total };
       });
     }
-  }
-  componentDidMount() {
-    this.getTotal();
   }
 
   updateTotal() {
@@ -55,11 +59,13 @@ const Cart = class extends React.Component {
   }
 
   render() {
+    // this.getTotal();
     const cart = this.state.cart;
     const total = this.state.total;
     if (total >= 0 && (cart != undefined || cart === "")) {
       return (
         <section>
+          {console.log(total)}
           <div>
             <div id="cartdownload">
               <CartContent
