@@ -35,13 +35,13 @@ const Cart = class extends React.Component {
     if (Array.isArray(cart)) {
       cart.forEach(element => {
         const amount = element["amount"];
-        console.log(amount);
+        // console.log(amount);
       });
     } else {
       // const carte = JSON.parse(cart);
       const amount = cart.amount;
       if (!cart.plan) {
-        console.log(cart);
+        // console.log(cart);
         return;
       }
       if (!cart.plan.price || !cart.plan) return;
@@ -65,7 +65,7 @@ const Cart = class extends React.Component {
     if (total >= 0 && (cart != undefined || cart === "")) {
       return (
         <section>
-          {console.log(total)}
+          {/* {console.log(total)} */}
           <div>
             <div id="cartdownload">
               <CartContent
