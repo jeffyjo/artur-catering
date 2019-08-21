@@ -1,11 +1,7 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+title: Artur Catering
+description: "\r\n\nEksklusive catering med udgangspunkt i det nordiske køkken, med en syd/øst europæisk twist.\r\n\nDet er vigtigt for Artur at have en god kontakt til kunden, da han bruger kundens energi til at skræddersyge den perfekte madplan. Derfor får kunden den bedste service fra begyndelsen til levering.  \r\n\nArtur Catering leverer mad til diverse arrangementer, som fødselsdage, firmafester, bryllupper og studenterfester. Derudover har Arturs hold ekspertise i at levere extreme catering.\r\n\nDet er vigtigt for Artur at alle råvarer er af den højeste kvalitet, så du kan smage maden du betaler for.  \r\n\nArtur Catering er ikke kun maden, det er hele oplevelsen du køber!"
 blurbs:
   - description: A Description of some delicious food
     image:
