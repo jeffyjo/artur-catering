@@ -49,6 +49,6 @@
   "devDependencies": {
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2",
-    "sharp": "^0.23.2"
+    "sharp": "^0.30.5"
   }
 }
